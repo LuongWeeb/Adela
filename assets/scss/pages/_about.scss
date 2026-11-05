@@ -1,0 +1,288 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+@mixin styles {
+  .intro {
+    align-items: stretch;
+  }
+
+  .intro h1 {
+    font-size: 32px;
+  }
+
+  .intro p {
+    text-align: justify;
+    color: $color-text-light;
+    margin-bottom: 10px;
+  }
+
+  .intro > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    text-align: center;
+    color: $color-navy;
+    margin-top: 30px;
+
+    @include respond-from('desktop-sm') {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+  }
+
+  .stats strong {
+    display: block;
+    font: bold 36px $font-heading;
+    color: $color-orange;
+
+    @include respond-from('desktop-sm') {
+      font-size: clamp(24px, 2.65vw, 36px);
+    }
+  }
+
+  .history {
+    color: $color-white;
+    background: linear-gradient(#052352e8, #052352e8), url("../images/about-cabinet.png") center/cover;
+    padding: 55px 0;
+  }
+
+  .history h2 {
+    color: $color-white;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    margin: 32px 0 0 8px;
+    border-left: 2px dotted $color-white;
+  }
+
+  .timeline article {
+    position: relative;
+    padding: 0 0 30px 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -7px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $color-gold;
+    }
+
+    &:last-child { padding-bottom: 0; }
+  }
+
+  @include respond-from('layout-mobile') {
+    .timeline {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 30px;
+      margin: 55px 0 0;
+      border-left: 0;
+      border-top: 2px dotted $color-white;
+    }
+
+    .timeline article {
+      padding: 25px 0 0;
+
+      &::before { top: -7px; left: 0; }
+    }
+  }
+
+  .timeline h3 {
+    font-size: 26px;
+    color: $color-gold;
+    margin-bottom: 12px;
+  }
+
+  .timeline p {
+    font-size: 15px;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    border: 1px solid #c7cfdd;
+    border-radius: 5px;
+    padding: 28px 20px;
+  }
+
+  .service-card h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 21px;
+    margin-bottom: 16px;
+  }
+
+  .service-card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+  }
+
+  .service-card p {
+    text-align: justify;
+  }
+
+  .policies {
+    background: linear-gradient(#0009, #0009), url("../images/kitchen.png") center/cover;
+    padding: 80px 0;
+    color: $color-white;
+  }
+
+  .policies h2 {
+    color: $color-white;
+  }
+
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    text-align: center;
+  }
+
+  .policy-icon {
+    background: $color-white;
+    color: $color-navy;
+    font-size: 65px;
+    padding: 25px 0;
+    border-radius: 32px 0;
+    border-bottom: 5px solid $color-orange;
+    margin-bottom: 10px;
+  }
+
+  .locations {
+    background: #f1f9fc;
+  }
+
+  .locations .two-columns {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: center;
+
+    @include respond-from('layout-mobile') {
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    }
+  }
+
+  .locations h2 {
+    font: bold 31px/1.35 $font-body;
+  }
+
+  .locations li {
+    margin: 18px 0;
+  }
+
+  .locations li::before {
+    content: "●";
+    color: $color-navy;
+    margin-right: 10px;
+  }
+
+  .locations img {
+    max-height: 470px;
+    object-fit: contain;
+    margin: auto;
+  }
+
+  .vouchers {
+    display: flex;
+    border: 1px dashed $color-navy;
+    margin-top: 35px;
+  }
+
+  .vouchers p {
+    flex: 1;
+    text-align: center;
+    padding: 20px 8px;
+    color: #666;
+    border-right: 1px dashed $color-text-light;
+  }
+
+  .vouchers strong {
+    display: block;
+    color: $color-navy;
+    font-size: 25px;
+  }
+
+  .showroom {
+    border: 1px solid #b2bfd2;
+    border-radius: 5px;
+    padding: 28px 32px;
+  }
+
+  .showroom h2 {
+    font: bold 30px/1.3 $font-body;
+    text-align: center;
+  }
+
+  .showroom p {
+    color: $color-text-light;
+    margin: 25px 0;
+  }
+
+  .showroom .button {
+    display: block;
+    text-align: center;
+  }
+
+  @include respond-to('layout-tablet') {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .policy-grid {
+      gap: 12px;
+    }
+
+    .vouchers strong {
+      font-size: 18px;
+    }
+  }
+
+  @include respond-to('layout-mobile') {
+    .intro h1 {
+      font-size: 28px;
+    }
+
+    .intro > img {
+      height: auto;
+    }
+
+    .stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .policy-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .locations h2, .showroom h2 {
+      font-size: 24px;
+    }
+
+    .vouchers strong {
+      font-size: 15px;
+    }
+  }
+}

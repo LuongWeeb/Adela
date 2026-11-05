@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Trang chủ - Adela Việt Nam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+      <!-- Google Fonts: Montserrat & Roboto (Chuẩn thiết kế Figma Adela) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container top-inner">
+        <div class="social" aria-label="Mạng xã hội">
+          <span role="img" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span><span role="img" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span><span role="img" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span><span role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span>
+        </div>
+        <p>Tiết kiệm 20% <span class="promo-detail">khi sử dụng </span>mã: <strong>ADELAVIETNAM20</strong></p>
+        <p class="top-contact"><a class="hotline-link" href="tel:0321456987"><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>0321 456 987</strong></a> &nbsp; <i class="fa-solid fa-envelope" aria-hidden="true"></i> info@adelavietnam.vn</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-row">
+          <a class="logo" href="index.html"
+            ><img
+              src="../assets/images/logo.png"
+              alt="Adela Việt Nam"
+              width="169"
+              height="58"
+          /></a>
+          <form class="search demo-form" aria-label="Tìm kiếm sản phẩm">
+            <label class="visually-hidden" for="site-search">Tìm kiếm sản phẩm</label>
+            <input
+              name="site-search" 
+              id="site-search"              
+              type="search"
+              aria-label="Tìm kiếm sản phẩm"
+              placeholder="Tìm kiếm sản phẩm"
+            /><button aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+          </form>
+          <span class="header-action"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Giỏ hàng <span class="cart-count" aria-label="0 sản phẩm">0</span></span
+          ><span class="header-action"><i class="fa-regular fa-user" aria-hidden="true"></i> Tài khoản</span>
+        </div>
+        <nav class="nav" aria-label="Menu chính">
+          <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-close-wrapper">
+              <span class="nav-logo">Adela<sup>VN</sup></span>
+              <button type="button" class="nav-close-btn" id="nav-close-btn" aria-label="Đóng menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            </li>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="about.html">VỀ ADELA</a></li>
+            <li class="has-dropdown">
+              <a href="product.html">SẢN PHẨM <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="product.html#tu-bao-quan"><i class="fa-solid fa-wine-bottle" aria-hidden="true"></i> Tủ bảo quản rượu vang</a></li>
+                <li><a href="product.html#tu-cigar"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Tủ bảo quản Cigar cao cấp</a></li>
+                <li><a href="product.html#ly-ruou-vang"><i class="fa-solid fa-wine-glass" aria-hidden="true"></i> Ly rượu vang pha lê Riedel</a></li>
+                <li><a href="product.html#decanter"><i class="fa-solid fa-flask" aria-hidden="true"></i> Bình chiết Decanter nghệ thuật</a></li>
+                <li><a href="product.html#phu-kien"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Phụ kiện & Dụng cụ mở vang</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#tin-tuc">TIN TỨC</a></li>
+            <li><a href="#lien-he">LIÊN HỆ</a></li>
+          </ul>
+          <div class="nav-notes-group">
+            <div class="nav-note-dropdown">
+              <a class="nav-note" href="about.html#showrooms" role="button" aria-expanded="false"
+                ><i class="fa-solid fa-store" aria-hidden="true"></i> Bạn muốn tự đến lấy hàng?<br /><strong
+                  >Chọn cửa hàng <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i
+                ></strong></a
+              >
+              <div class="dropdown-panel showroom-panel">
+                <div class="panel-header"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Hệ thống Showroom Adela</div>
+                <ul class="panel-list">
+                  <li>
+                    <strong>Showroom Hà Nội:</strong>
+                    <p>Số 123 Tây Mỗ, Nam Từ Liêm, Hà Nội</p>
+                    <a href="tel:0987654321"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4321</a>
+                  </li>
+                  <li>
+                    <strong>Showroom TP. Hồ Chí Minh:</strong>
+                    <p>Số 456 Lê Duẩn, P. Bến Nghé, Quận 1, TP.HCM</p>
+                    <a href="tel:0987654322"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4322</a>
+                  </li>
+                  <li>
+                    <strong>Showroom Đà Nẵng:</strong>
+                    <p>Số 789 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng</p>
+                    <a href="tel:0987654323"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4323</a>
+                  </li>
+                </ul>
+                <div class="panel-footer">
+                  <a href="about.html#showrooms">Xem bản đồ chỉ đường &raquo;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-note-dropdown">
+              <a class="nav-note" href="product.html#tu-van" role="button" aria-expanded="false"
+                ><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Bạn cần giao hàng tận nơi?<br /><strong
+                  >Xem báo giá <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i
+                ></strong></a
+              >
+              <div class="dropdown-panel shipping-panel">
+                <div class="panel-header"><i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i> Báo giá & Chính sách giao hàng</div>
+                <ul class="panel-list">
+                  <li>
+                    <span class="shipping-tag tag-free">Miễn phí 100%</span>
+                    <strong>Hỏa tốc 2 Giờ (Nội thành HN & TP.HCM)</strong>
+                    <p>Giao nguyên kiện tủ rượu, cigar bằng ô tô chuyên dụng.</p>
+                  </li>
+                  <li>
+                    <span class="shipping-tag tag-standard">Đồng giá 150K</span>
+                    <strong>Vận chuyển toàn quốc (24h - 48h)</strong>
+                    <p>Đóng thùng gỗ bảo hiểm rơi vỡ, đổi mới ngay lập tức.</p>
+                  </li>
+                  <li>
+                    <span class="shipping-tag tag-vip">VIP</span>
+                    <strong>Lắp đặt & Test độ ẩm tận nhà</strong>
+                    <p>Chuyên viên kỹ thuật bàn giao và nghiệm thu trực tiếp.</p>
+                  </li>
+                </ul>
+                <div class="panel-footer">
+                  <a href="product.html#tu-van">Nhận tư vấn báo giá chi tiết &raquo;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">
+        Adela Việt Nam - Tủ bảo quản và phụ kiện rượu vang
+      </h1>
+      <section class="hero" aria-label="Bộ sưu tập Riedel">
+        <a href="product.html"
+          ><img
+            src="../assets/images/hero.png"
+            alt="Riedel Wine Wings - Sải cánh nâng tầm hương vị vang tinh tế"
+        /></a>
+      </section>
+      <section class="section container" data-aos="fade-up">
+        <div class="center-title" data-aos="fade-down"><h2>DANH MỤC SẢN PHẨM</h2></div>
+        <div class="category-grid">
+          <a data-aos="fade-up" data-aos-delay="50" href="product.html"
+            ><img src="../assets/images/category-1.png" alt="Tủ rượu vang" />Tủ rượu
+            vang</a
+          ><a data-aos="fade-up" data-aos-delay="100" href="product.html"
+            ><img src="../assets/images/category-2.png" alt="Tủ Cigar" />Tủ Cigar</a
+          ><a data-aos="fade-up" data-aos-delay="150" href="product.html"
+            ><img src="../assets/images/category-3.png" alt="Ly rượu vang" />Ly rượu
+            vang</a
+          ><a data-aos="fade-up" data-aos-delay="200" href="product.html"
+            ><img src="../assets/images/category-4.png" alt="Decanter" />Decanter</a
+          ><a data-aos="fade-up" data-aos-delay="250" href="product.html"
+            ><img src="../assets/images/category-5.png" alt="Khui rượu vang" />Khui rượu
+            vang</a
+          ><a data-aos="fade-up" data-aos-delay="300" href="product.html"
+            ><img src="../assets/images/category-6.png" alt="Phụ kiện khác" />Phụ kiện
+            khác</a
+          >
+        </div>
+      </section>
+      <section class="container flash" data-aos="fade-up">
+        <p class="flash-caption">GIỜ VÀNG GIÁ SỐC <i class="fa-regular fa-clock" aria-hidden="true"></i> 12H - 17H</p>
+        <h2>GIẢM SỐC <i class="fa-solid fa-bolt text-gold flash-bolt" aria-hidden="true"></i> SĂN THẦN TỐC</h2>
+        <div class="sale-dates">
+          <div class="current">
+            <strong id="flash-sale-status" role="status">Đang diễn ra</strong
+            ><small>Kết thúc trong: <b id="flash-countdown" role="timer" aria-label="Thời gian còn lại" data-duration-seconds="19800"><span id="hours">05</span> : <span id="minutes">30</span> : <span id="seconds">00</span></b></small>
+          </div>
+          <div><strong>15/07</strong><small>Sắp diễn ra</small></div>
+          <div><strong>16/07</strong><small>Sắp diễn ra</small></div>
+          <div><strong>17/07</strong><small>Sắp diễn ra</small></div>
+          <div><strong>18/07</strong><small>Sắp diễn ra</small></div>
+          <div><strong>19/07</strong><small>Sắp diễn ra</small></div>
+        </div>
+        <div class="sale-products">
+          <div class="product-grid">
+            <article class="product-card" data-aos="fade-up">
+              <a href="product.html"
+                ><span class="badge flash-badge">Giảm 30%</span
+                ><img
+                  src="../assets/images/sale-1.png"
+                  alt="Tủ bảo quản rượu vang nhỏ gọn Vinocave 28 chai"
+                  loading="lazy"
+                />
+                <div class="info">
+                  <h3>Tủ bảo quản rượu vang nhỏ gọn Vinocave 28 chai</h3>
+                  <span class="price">6.250.000₫</span
+                  ><span class="old">8.250.000₫</span>
+                  <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                  <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+                </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+              >
+            </article>
+            <article class="product-card" data-aos="fade-up">
+              <a href="product.html"
+                ><span class="badge flash-badge">Giảm 30%</span
+                ><img
+                  src="../assets/images/sale-2.png"
+                  alt="Ly Rượu Vang Đỏ Fatto A Mano Cabernet"
+                  loading="lazy"
+                />
+                <div class="info">
+                  <h3>Ly Rượu Vang Đỏ Fatto A Mano Cabernet</h3>
+                  <span class="price">6.250.000₫</span
+                  ><span class="old">8.250.000₫</span>
+                  <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                  <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+                </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+              >
+            </article>
+            <article class="product-card" data-aos="fade-up">
+              <a href="product.html"
+                ><span class="badge flash-badge">Giảm 30%</span
+                ><img
+                  src="../assets/images/sale-3.png"
+                  alt="Bình chiết rượu vang Riedel Decanter Amadeo"
+                  loading="lazy"
+                />
+                <div class="info">
+                  <h3>Bình chiết rượu vang Riedel Decanter Amadeo</h3>
+                  <span class="price">6.250.000₫</span
+                  ><span class="old">8.250.000₫</span>
+                  <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                  <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+                </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+              >
+            </article>
+            <article class="product-card" data-aos="fade-up">
+              <a href="product.html"
+                ><span class="badge flash-badge">Giảm 30%</span
+                ><img
+                  src="../assets/images/sale-4.png"
+                  alt="Set mở rượu vang Pulltex Classic Silver"
+                  loading="lazy"
+                />
+                <div class="info">
+                  <h3>Set mở rượu vang Pulltex Classic Silver</h3>
+                  <span class="price">6.250.000₫</span
+                  ><span class="old">8.250.000₫</span>
+                  <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                  <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+                </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+              >
+            </article>
+            <article class="product-card" data-aos="fade-up">
+              <a href="product.html"
+                ><span class="badge flash-badge">Giảm 30%</span
+                ><img
+                  src="../assets/images/sale-5.png"
+                  alt="Dụng cụ mở rượu vang Durand thép không gỉ"
+                  loading="lazy"
+                />
+                <div class="info">
+                  <h3>Dụng cụ mở rượu vang Durand thép không gỉ</h3>
+                  <span class="price">6.250.000₫</span
+                  ><span class="old">8.250.000₫</span>
+                  <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                  <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+                </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section container" data-aos="fade-up">
+        <div class="section-title" data-aos="fade-down">
+          <h2 id="tu-bao-quan">TỦ BẢO QUẢN RƯỢU VANG</h2>
+          <a class="button" href="product.html">Xem tất cả</a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/cabinet-1.png"
+                alt="Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/cabinet-2.png"
+                alt="Tủ rượu vang Vinocave 22 chai JC76A gọn gàng"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Tủ rượu vang Vinocave 22 chai JC76A gọn gàng</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/cabinet-3.png"
+                alt="Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/cabinet-4.png"
+                alt="Tủ cigar rượu vang mini Golden Fire 2 in 1 H737"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Tủ cigar rượu vang mini Golden Fire 2 in 1 H737</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/cabinet-5.png"
+                alt="Tủ bảo quản rượu vang cigar 2 trong 1 Golden Fire"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Tủ bảo quản rượu vang cigar 2 trong 1 Golden Fire</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+        </div>
+        <div class="two-columns banner-pair" data-aos="zoom-in">
+          <a href="product.html"
+            ><img
+              src="../assets/images/banner-1.png"
+              alt="Ưu đãi sản phẩm Adela"
+              loading="lazy" /></a
+          ><a href="product.html"
+            ><img
+              src="../assets/images/banner-2.png"
+              alt="Ưu đãi sản phẩm Adela"
+              loading="lazy"
+          /></a>
+        </div>
+      </section>
+      <section class="section container" data-aos="fade-up">
+        <div class="section-title" data-aos="fade-down">
+          <h2>LY RƯỢU VANG</h2>
+          <a class="button" href="product.html">Xem tất cả</a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/glass-1.png"
+                alt="Ly rượu vang đỏ RIEDEL Performance OP Cabernet"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Ly rượu vang đỏ RIEDEL Performance OP Cabernet</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/glass-2.png"
+                alt="Ly rượu Champagne RIEDEL Performance OP"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Ly rượu Champagne RIEDEL Performance OP</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/glass-3.png"
+                alt="Ly rượu vang trắng RIEDEL OP Performance"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Ly rượu vang trắng RIEDEL OP Performance</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/glass-4.png"
+                alt="Ly rượu vang đỏ RIEDEL Performance OP Pinot Noir"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Ly rượu vang đỏ RIEDEL Performance OP Pinot Noir</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/glass-5.png"
+                alt="Ly rượu vang trắng RIEDEL Performance Sauvignon"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Ly rượu vang trắng RIEDEL Performance Sauvignon</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+        </div>
+        <div class="two-columns banner-pair" data-aos="zoom-in">
+          <a href="product.html"
+            ><img
+              src="../assets/images/banner-3.png"
+              alt="Ưu đãi sản phẩm Adela"
+              loading="lazy" /></a
+          ><a href="product.html"
+            ><img
+              src="../assets/images/banner-4.png"
+              alt="Ưu đãi sản phẩm Adela"
+              loading="lazy"
+          /></a>
+        </div>
+      </section>
+      <section class="section container" data-aos="fade-up">
+        <div class="section-title" data-aos="fade-down">
+          <h2>DECANTER & PHỤ KIỆN</h2>
+          <a class="button" href="product.html">Xem tất cả</a>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/accessory-1.png"
+                alt="Bình chiết rượu vang Riedel Decanter Mamba R.Q"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Bình chiết rượu vang Riedel Decanter Mamba R.Q</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/accessory-2.png"
+                alt="Bình chiết rượu vang Zalto Decanter Axium"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Bình chiết rượu vang Zalto Decanter Axium</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/accessory-3.png"
+                alt="Máy chiết rượu Coravin Model 6+ màu đỏ vang"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Máy chiết rượu Coravin Model 6+ màu đỏ vang</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/accessory-4.png"
+                alt="Phễu Lọc Rượu Vang Pulltex"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Phễu Lọc Rượu Vang Pulltex</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+          <article class="product-card" data-aos="fade-up">
+            <a href="product.html"
+              ><span class="badge flash-badge">Giảm 30%</span
+              ><img
+                src="../assets/images/accessory-5.png"
+                alt="Bình chiết rượu vang RIEDEL Riedel Sakura"
+                loading="lazy"
+              />
+              <div class="info">
+                <h3>Bình chiết rượu vang RIEDEL Riedel Sakura</h3>
+                <span class="price">6.250.000₫</span
+                ><span class="old">8.250.000₫</span>
+                <div class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                <p class="offer"><i class="fa-solid fa-crown" aria-hidden="true"></i> Ưu đãi 5% khi mua thêm sản phẩm...</p>
+              </div><span class="card-quick-view"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</span></a
+            >
+          </article>
+        </div>
+      </section>
+      <section class="section light-section" data-aos="fade-up">
+        <div class="container two-columns about-summary">
+          <img data-aos="fade-right"
+            src="../assets/images/about-collage.png"
+            alt="Bộ sưu tập tủ rượu vang Adela"
+            loading="lazy"
+          />
+          <div data-aos="fade-left">
+            <h2>VỀ ADELA VIỆT NAM</h2>
+            <strong class="gold-line">Lorem ipsum dolor sit amet</strong>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
+              amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </p>
+            <div class="about-summary-more">
+              <a href="about.html">XEM THÊM <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="values">
+              <div><span><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span>Vật liệu an toàn</div>
+              <div><span><i class="fa-solid fa-temperature-arrow-down" aria-hidden="true"></i></span>Công nghệ hiện đại</div>
+              <div><span><i class="fa-solid fa-award" aria-hidden="true"></i></span>Chất lượng hàng đầu</div>
+              <div><span><i class="fa-solid fa-user-tie" aria-hidden="true"></i></span>Đội ngũ chuyên nghiệp</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section container" data-aos="fade-up">
+        <div class="center-title" data-aos="fade-down"><h2>KHÁCH HÀNG NÓI VỀ CHÚNG TÔI</h2></div>
+        <div class="swiper testimonial-swiper" aria-label="Khách hàng nói về Adela">
+          <div class="swiper-wrapper two-columns">
+          <article class="testimonial swiper-slide">
+            <img
+              src="../assets/images/customer-1.png"
+              alt="Nguyễn Văn Anh"
+              loading="lazy"
+            />
+            <div>
+              <h3>Nguyễn Văn Anh</h3>
+              <small>Tây Mỗ, Tp Hà Nội</small>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </article>
+          <article class="testimonial swiper-slide">
+            <img
+              src="../assets/images/customer-2.png"
+              alt="Nguyễn Tâm Anh"
+              loading="lazy"
+            />
+            <div>
+              <h3>Nguyễn Tâm Anh</h3>
+              <small>Tây Mỗ, Tp Hà Nội</small>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div class="slider-controls">
+            <button type="button" class="swiper-button-prev" aria-label="Đánh giá trước"></button>
+            <div class="swiper-pagination"></div>
+            <button type="button" class="swiper-button-next" aria-label="Đánh giá tiếp theo"></button>
+          </div>
+        </div>
+      </section>
+      <section class="section light-section" data-aos="fade-up">
+        <div class="container">
+          <div class="section-title" data-aos="fade-down">
+            <h2>KHUYẾN MẠI HOT NHẤT</h2>
+            <a class="button" href="product.html">Xem tất cả</a>
+          </div>
+          <div class="promotion-grid">
+            <article class="promotion-card">
+              <a href="product.html"
+                ><img
+                  src="../assets/images/promotion-1.png"
+                  alt="Khuyến mại Adela 1"
+                  loading="lazy"
+                />
+                <h3>
+                  LOREM IPSUM DOLOR SITAMET, CONSE CTETUR ADIPISCING ELI
+                </h3></a
+              >
+            </article>
+            <article class="promotion-card">
+              <a href="product.html"
+                ><img
+                  src="../assets/images/promotion-2.png"
+                  alt="Khuyến mại Adela 2"
+                  loading="lazy"
+                />
+                <h3>
+                  LOREM IPSUM DOLOR SITAMET, CONSE CTETUR ADIPISCING ELI
+                </h3></a
+              >
+            </article>
+            <article class="promotion-card">
+              <a href="product.html"
+                ><img
+                  src="../assets/images/promotion-3.png"
+                  alt="Khuyến mại Adela 3"
+                  loading="lazy"
+                />
+                <h3>
+                  LOREM IPSUM DOLOR SITAMET, CONSE CTETUR ADIPISCING ELI
+                </h3></a
+              >
+            </article>
+            <article class="promotion-card">
+              <a href="product.html"
+                ><img
+                  src="../assets/images/promotion-4.png"
+                  alt="Khuyến mại Adela 4"
+                  loading="lazy"
+                />
+                <h3>
+                  LOREM IPSUM DOLOR SITAMET, CONSE CTETUR ADIPISCING ELI
+                </h3></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section container" id="tin-tuc" data-aos="fade-up">
+        <div class="center-title" data-aos="fade-down">
+          <h2>TIN TỨC</h2>
+          <p>
+            <strong>Adela Việt Nam</strong> hân hạnh mang đến cho bạn tin tức
+            mới nhất
+          </p>
+        </div>
+        <div class="news-grid">
+          <article>
+            <img
+              src="../assets/images/news-1.png"
+              alt="Tin tức và trải nghiệm rượu vang 1"
+              loading="lazy"
+            />
+            <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </article>
+          <article>
+            <img
+              src="../assets/images/news-2.png"
+              alt="Tin tức và trải nghiệm rượu vang 2"
+              loading="lazy"
+            />
+            <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </article>
+          <article>
+            <img
+              src="../assets/images/news-3.png"
+              alt="Tin tức và trải nghiệm rượu vang 3"
+              loading="lazy"
+            />
+            <h3>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt
+            </p>
+          </article>
+        </div>
+      </section>
+      <div class="support-strip" data-aos="fade-up">
+        <div class="container support-grid">
+          <div>
+            <strong><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Bảo hành: 098 765 4321</strong
+            ><small>(08:00 - 18:00)</small>
+          </div>
+          <div>
+            <strong><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> Mua hàng: 098 765 4321</strong
+            ><small>(08:00 - 18:00)</small>
+          </div>
+          <div>
+            <strong><i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i> Khiếu nại: 098 765 4321</strong
+            ><small>(08:00 - 18:00)</small>
+          </div>
+          <div>
+            <strong><i class="fa-solid fa-headset" aria-hidden="true"></i> Hỗ trợ & Tư vấn tận tình</strong
+            ><small>(08:00 - 18:00)</small>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Chân trang dùng chung -->
+    <footer class="footer" id="lien-he">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            Adela<sup><i class="fa-solid fa-leaf" aria-hidden="true"></i></sup>
+          </div>
+          <p>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>Địa chỉ:</strong> Lorem ipsum dolor sit amet, consectetur
+          </p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>Hotline:</strong> 0321 456 987</p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>Bảo hành:</strong> 0321 456 987</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <strong>Email:</strong> info@adelavietnam.vn</p>
+          <p>
+            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <strong>Thời gian làm việc:</strong> Thứ 2 - Thứ 7 (08:00 - 18:00)
+          </p>
+        </div>
+        <div>
+          <h3>THÔNG TIN</h3>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Về Adela</a></li>
+            <li><a href="product.html">Sản phẩm</a></li>
+            <li><a href="index.html#tin-tuc">Tin tức</a></li>
+            <li><a href="#lien-he">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>HỖ TRỢ</h3>
+          <ul>
+            <li>Hướng dẫn mua hàng</li>
+            <li>Chính sách bảo mật</li>
+            <li>Chính sách đổi trả</li>
+            <li>Chính sách bảo hành</li>
+            <li>Chính sách thanh toán</li>
+            <li>Phương thức giao nhận</li>
+          </ul>
+        </div>
+        <div>
+          <h3>CẬP NHẬT TIN KHUYẾN MẠI</h3>
+          <p>Đăng ký nhận thông tin mới nhất hoặc các ưu đãi hấp dẫn</p>
+          <form class="newsletter demo-form" aria-label="Đăng ký nhận tin">
+            <label class="visually-hidden" for="newsletter-email">Email nhận tin</label>
+            <input
+              name="newsletter-email" 
+              id="newsletter-email"              
+              type="email"
+              required
+              aria-label="Email nhận tin"
+              placeholder="Email của bạn"
+            /><button aria-label="Đăng ký nhận tin"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          </form>
+          <h3>MẠNG XÃ HỘI</h3>
+          <div class="social">
+            <span role="img" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span><span role="img" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span><span role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span><span role="img" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Copyright by All rights reserved. Design by Vicogroup
+      </div>
+    </footer>
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Lên đầu trang"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/countdown.js" defer></script>
+    <script src="../assets/js/slider.js" defer></script>
+    <script src="../assets/js/effects.js" defer></script>
+  </body>
+</html>

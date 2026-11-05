@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build & compiler temp
+.tmp-scss/
+*.css.map
+*.log
+
+# Automated test artifacts & screenshots
+doc/*-screenshots/
+doc/effects-check/
+doc/luxury-motion-check/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini

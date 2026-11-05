@@ -1,0 +1,293 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+@mixin styles {
+  .about-summary-more { text-align: right; }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 10px;
+    text-align: center;
+
+    @include respond-from('mobile') {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @include respond-from('desktop-sm') {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 28px;
+    }
+  }
+
+  .category-grid img {
+    width: min(100%, 150px);
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: contain;
+    margin: 0 auto 10px;
+  }
+
+  .category-grid a {
+    font-weight: bold;
+  }
+
+  .banner-pair {
+    margin-top: 52px;
+  }
+
+  .banner-pair img {
+    width: 100%;
+  }
+
+  .flash {
+    padding: 28px 20px 20px;
+    background: linear-gradient(#d50000, #ffba77 35%, #ffd3a3);
+    border-radius: 12px;
+  }
+
+  .flash h2 {
+    font: bold 48px $font-body;
+    text-shadow: 3px 3px #a40000;
+    color: $color-white;
+    text-align: center;
+    margin: 16px 0 28px;
+  }
+
+  .flash-caption {
+    text-align: center;
+    color: #fff3bd;
+    font-weight: bold;
+  }
+
+  .sale-dates {
+    display: grid;
+    grid-template-columns: 1.8fr repeat(5, 1fr);
+    text-align: center;
+    background: $color-white;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .sale-dates div {
+    padding: 18px 4px;
+  }
+
+  .sale-dates .current {
+    background: #ffe7e7;
+    color: #ed2828;
+    border-bottom: 2px solid #ed2828;
+  }
+
+  .sale-dates small {
+    display: block;
+    color: $color-text-light;
+  }
+
+  .sale-products {
+    background: $color-white;
+    padding: 22px 16px;
+    border-radius: 0 0 8px 8px;
+  }
+
+  .sale-products .product-card {
+    border-color: #ed0000;
+  }
+
+  .sale-products .product-card img {
+    height: 180px;
+  }
+
+  .about-summary {
+    align-items: center;
+  }
+
+  .about-summary > img {
+    width: 100%;
+  }
+
+  .about-summary p {
+    color: $color-text-light;
+    text-align: justify;
+    margin: 16px 0;
+  }
+
+  .values {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 44px;
+    text-align: center;
+    color: $color-navy;
+    font-weight: bold;
+  }
+
+  .values span {
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: $color-navy;
+    color: $color-gold;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+    line-height: 60px;
+  }
+
+  .testimonial {
+    display: flex;
+    gap: 12px;
+
+    > div { min-width: 0; }
+  }
+
+  .testimonial img {
+    width: 33%;
+    object-fit: cover;
+    border-radius: 8px;
+    align-self: start;
+  }
+
+  .testimonial h3 {
+    color: $color-navy;
+    font-size: 21px;
+  }
+
+  .testimonial p {
+    color: $color-text-light;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .dots {
+    text-align: center;
+    color: #dca744;
+    letter-spacing: 12px;
+    margin-top: 36px;
+  }
+
+  .promotion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .promotion-card {
+    border: 1px solid #c7cfdd;
+    border-radius: 6px;
+    overflow: hidden;
+    background: $color-white;
+  }
+
+  .promotion-card img {
+    width: 100%;
+  }
+
+  .promotion-card h3 {
+    padding: 10px;
+    font-size: 16px;
+    color: $color-navy;
+    line-height: 1.3;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+
+    @include respond-from('layout-mobile') {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .news-grid img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .news-grid h3 {
+    font-size: 16px;
+    color: $color-navy;
+    margin-top: 8px;
+    line-height: 1.3;
+  }
+
+  .news-grid p {
+    font-size: 14px;
+    color: $color-text-light;
+  }
+}
+
+
+@mixin responsive {
+  @include respond-to('layout-tablet') {
+    .promotion-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flash h2 {
+      font-size: 36px;
+    }
+  }
+
+  @include respond-to('layout-mobile') {
+    .category-grid {
+      gap: 20px 10px;
+      font-size: 12px;
+    }
+
+    .category-grid img {
+      width: min(100%, 120px);
+    }
+
+    .banner-pair {
+      margin-top: 24px;
+    }
+
+    .flash {
+      padding: 16px 8px 8px;
+    }
+
+    .flash h2 {
+      font-size: 26px;
+    }
+
+    .sale-dates {
+      grid-template-columns: repeat(3, 1fr);
+      font-size: 12px;
+    }
+
+    .sale-dates .current {
+      grid-column: 1 / -1;
+    }
+
+    .sale-products {
+      padding: 16px 8px;
+    }
+
+    .sale-products .product-card img {
+      height: 140px;
+    }
+
+    .values {
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .values span {
+      width: 48px;
+      height: 48px;
+      line-height: 48px;
+    }
+
+    .promotion-card h3 {
+      font-size: 13px;
+    }
+  }
+}

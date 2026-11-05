@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Quản lý danh mục, giá bán và tồn kho sản phẩm Adela Việt Nam.">
+  <title>Quản lý kho sản phẩm | Adela Việt Nam</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/products-admin.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
+  <script src="../assets/js/api-service.js" defer></script>
+  <script src="../assets/js/admin-layout.js" defer></script>
+  <script src="../assets/js/products-admin.js" defer></script>
+</head>
+<body class="dashboard-page products-page">
+  <a class="skip-link" href="#inventory">Đến nội dung chính</a>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 10L3 7m9 5 9-5m-9 5v10M7 4.8l9 5v5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 7h16l1 14H3Zm4 1V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-10m-6 0h6v6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0v6l2 3H4l2-3Zm4 12h4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7a9 9 0 1 0 1 9M20 2v6h-6"/></symbol>
+  </svg>
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="admin-sidebar" aria-label="Điều hướng quản trị">
+      <a class="admin-brand" href="dashboard.html" aria-label="Adela Admin — Tổng quan"><span class="brand-mark">A<span>.</span></span><span class="sidebar-label"><strong>ADELA</strong><small>ADMIN WORKSPACE</small></span></a>
+      <button class="sidebar-close icon-button" id="sidebar-close" aria-label="Đóng menu">×</button>
+      <p class="nav-caption sidebar-label">KHÔNG GIAN QUẢN TRỊ</p>
+      <nav aria-label="Menu chính">
+        <a class="nav-item" href="dashboard.html" title="Tổng quan"><svg><use href="#i-grid"/></svg><span class="sidebar-label">Tổng quan</span></a>
+        <a class="nav-item is-active" href="products-admin.html" aria-current="page" title="Quản lý sản phẩm Adela"><svg><use href="#i-box"/></svg><span class="sidebar-label">Sản phẩm Adela</span></a>
+        <a class="nav-item" href="dashboard.html#recent-orders" title="Đơn hàng"><svg><use href="#i-bag"/></svg><span class="sidebar-label">Đơn hàng</span></a>
+        <button class="nav-item" data-notice="settings" title="Cài đặt"><svg><use href="#i-settings"/></svg><span class="sidebar-label">Cài đặt</span></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="workspace-note sidebar-label"><span class="workspace-dot"></span> Adela Việt Nam<small>Không gian quản trị kinh doanh</small></div><a class="nav-item" href="index.html" title="Về trang bán hàng"><svg><use href="#i-arrow"/></svg><span class="sidebar-label">Về trang bán hàng</span></a></div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+    <div class="admin-main" id="admin-main">
+      <header class="admin-header">
+        <button class="icon-button" id="sidebar-toggle" aria-label="Mở menu điều hướng" aria-controls="admin-sidebar" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+        <p class="inventory-summary" id="inventory-summary" role="status">Đang tải kho sản phẩm…</p>
+        <div class="header-actions"><a class="store-link" href="index.html">Trang chủ <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><button class="icon-button notification-button" data-notice="notifications" aria-label="Xem thông báo"><svg><use href="#i-bell"/></svg><span></span></button><div class="admin-profile"><span class="avatar" aria-hidden="true">AD</span><div><strong>Adela Admin</strong><small>Quản trị viên</small></div></div></div>
+      </header>
+      <main class="dashboard-content" id="inventory" tabindex="-1">
+        <div class="page-heading"><div><p class="eyebrow">ADELA VIỆT NAM / QUẢN LÝ KHO</p><h1>Kho sản phẩm Adela</h1><p>Quản lý danh mục, giá bán và tồn kho trong một không gian.</p></div><button class="product-button primary" id="add-product" type="button"><span aria-hidden="true">＋</span> Thêm sản phẩm mới</button></div>
+        <div class="data-toolbar"><span class="connection-status" id="storage-status" role="status">Đang tải dữ liệu…</span><span>Danh mục Adela · Bài tập cuối khóa</span></div>
+        <p class="dashboard-error" id="products-error" role="alert" hidden></p>
+        <section class="panel products-panel" aria-labelledby="products-heading">
+          <div class="panel-heading"><div><h2 id="products-heading">Danh sách sản phẩm</h2><p>Tủ rượu vang, tủ cigar và phụ kiện thưởng thức rượu.</p></div><span class="period-chip" id="product-count" role="status">10 sản phẩm</span></div>
+          <div class="products-toolbar">
+            <div class="product-search"><svg aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="product-search">Tìm tên hoặc mã sản phẩm</label><input id="product-search" type="search" placeholder="Tìm tên hoặc mã sản phẩm…" autocomplete="off"></div>
+            <div class="product-filter"><label for="category-filter">Dòng sản phẩm</label><select id="category-filter"><option value="">Tất cả danh mục</option><option value="wine-cabinet">Tủ rượu vang</option><option value="cigar-cabinet">Tủ bảo quản cigar</option><option value="wine-glass">Ly rượu vang</option><option value="decanter">Decanter</option><option value="accessory">Phụ kiện rượu vang</option></select></div>
+            <div class="product-filter"><label for="stock-filter">Tình trạng kho</label><select id="stock-filter"><option value="">Tất cả tình trạng</option><option value="in_stock">Còn hàng</option><option value="low_stock">Sắp hết hàng</option><option value="out_of_stock">Hết hàng</option></select></div>
+          </div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Bảng sản phẩm, có thể cuộn ngang">
+            <table class="products-table"><caption class="sr-only">Danh sách giá bán, số lượng và tình trạng kho sản phẩm Adela</caption><thead><tr><th scope="col">Mã SP</th><th scope="col">Hình ảnh</th><th scope="col">Tên sản phẩm</th><th scope="col">Giá bán</th><th scope="col">Giá niêm yết cũ</th><th scope="col">Tồn kho</th><th scope="col">Trạng thái</th><th scope="col">Thao tác</th></tr></thead><tbody id="products-body" aria-busy="true"><tr><td colspan="8" class="table-message"><span class="loading-spinner" aria-hidden="true"></span> Đang tải sản phẩm…</td></tr></tbody></table>
+          </div>
+          <div class="products-pagination"><p id="pagination-summary" role="status"></p><span>5 sản phẩm / trang</span><nav id="pagination" aria-label="Phân trang sản phẩm"></nav></div>
+        </section>
+        <p class="products-note">Dữ liệu thực hành theo Kế hoạch 06. Thay đổi được lưu trên trình duyệt này.</p>
+        <footer class="dashboard-footer"><span>© Adela Việt Nam</span><span>Không gian quản trị · Kết nối mọi hoạt động</span></footer>
+        <noscript><p class="dashboard-error">Vui lòng bật JavaScript để quản lý kho sản phẩm.</p></noscript>
+      </main>
+    </div>
+  </div>
+  <dialog class="product-modal" id="product-modal" aria-labelledby="modal-title" aria-describedby="modal-description">
+    <div class="modal-heading"><div><p class="eyebrow">DANH MỤC ADELA</p><h2 id="modal-title">Thêm sản phẩm mới</h2></div><button class="icon-button" id="modal-close" type="button" aria-label="Đóng biểu mẫu">×</button></div>
+    <p id="modal-description">Các trường có dấu * là bắt buộc.</p>
+    <form id="product-form" novalidate>
+      <div class="form-grid">
+        <div class="form-field full"><label for="product-name">Tên sản phẩm *</label><input id="product-name" name="name" maxlength="180" required aria-describedby="name-error" placeholder="VD: Tủ bảo quản rượu vang Adela"><span class="field-error" id="name-error"></span></div>
+        <div class="form-field full"><label for="product-category">Dòng sản phẩm *</label><select id="product-category" name="category" required aria-describedby="category-error"><option value="wine-cabinet">Tủ rượu vang</option><option value="cigar-cabinet">Tủ bảo quản cigar</option><option value="wine-glass">Ly rượu vang</option><option value="decanter">Decanter</option><option value="accessory">Phụ kiện rượu vang</option></select><span class="field-error" id="category-error"></span></div>
+        <div class="form-field"><label for="product-price">Giá bán (VNĐ) *</label><input id="product-price" name="price" type="number" inputmode="numeric" min="1" step="1" max="999999999999" required aria-describedby="price-error" placeholder="40000000"><span class="field-error" id="price-error"></span></div>
+        <div class="form-field"><label for="product-originalPrice">Giá niêm yết cũ (VNĐ)</label><input id="product-originalPrice" name="originalPrice" type="number" inputmode="numeric" min="0" step="1" max="999999999999" aria-describedby="originalPrice-error" placeholder="48000000"><span class="field-error" id="originalPrice-error"></span></div>
+        <div class="form-field full"><label for="product-stock">Số lượng tồn kho *</label><input id="product-stock" name="stock" type="number" inputmode="numeric" min="0" step="1" max="999999" required aria-describedby="stock-error stock-hint"><span class="field-error" id="stock-error"></span><small id="stock-hint">0: hết hàng · 1–5: sắp hết · Trên 5: còn hàng.</small></div>
+        <div class="form-field full"><label for="product-image">Ảnh sản phẩm *</label><div class="image-picker"><img id="image-preview" src="../assets/images/cabinet-1.png" alt="Xem trước ảnh sản phẩm" width="72" height="72"><select id="product-image" name="image" required aria-describedby="image-error"></select></div><span class="field-error" id="image-error"></span></div>
+      </div>
+      <p class="dashboard-error" id="form-error" role="alert" hidden></p>
+      <div class="modal-footer"><button class="product-button" id="modal-cancel" type="button">Hủy bỏ</button><button class="product-button primary" id="save-product" type="submit">Lưu sản phẩm</button></div>
+    </form>
+  </dialog>
+  <p class="product-toast" id="fallback-toast" role="status" hidden></p>
+</body>
+</html>

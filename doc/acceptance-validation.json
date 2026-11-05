@@ -1,0 +1,451 @@
+{
+  "date": "2026-11-02",
+  "status": "passed",
+  "browser": "Installed Chrome headless; real CDN requests",
+  "checks": [
+    {
+      "name": "index: real libraries",
+      "result": "pass"
+    },
+    {
+      "name": "index: HTML semantics, labels, images and table",
+      "result": "pass"
+    },
+    {
+      "name": "index: menu open, overlay, Escape and resize",
+      "result": "pass"
+    },
+    {
+      "name": "index: newsletter invalid and valid",
+      "result": "pass"
+    },
+    {
+      "name": "countdown: advances, reload retains deadline, expiry stops at zero",
+      "result": "pass"
+    },
+    {
+      "name": "index: Swiper navigation and touch swipe",
+      "result": "pass"
+    },
+    {
+      "name": "about: real libraries",
+      "result": "pass"
+    },
+    {
+      "name": "about: HTML semantics, labels, images and table",
+      "result": "pass"
+    },
+    {
+      "name": "about: menu open, overlay, Escape and resize",
+      "result": "pass"
+    },
+    {
+      "name": "about: newsletter invalid and valid",
+      "result": "pass"
+    },
+    {
+      "name": "product: real libraries",
+      "result": "pass"
+    },
+    {
+      "name": "product: HTML semantics, labels, images and table",
+      "result": "pass"
+    },
+    {
+      "name": "product: menu open, overlay, Escape and resize",
+      "result": "pass"
+    },
+    {
+      "name": "product: newsletter invalid and valid",
+      "result": "pass"
+    },
+    {
+      "name": "gallery: click, keyboard, rapid selection and active border",
+      "result": "pass"
+    },
+    {
+      "name": "color selection: click, keyboard, active border and purchase text",
+      "result": "pass"
+    },
+    {
+      "name": "quantity and purchase confirmation/cancel",
+      "result": "pass"
+    },
+    {
+      "name": "consult: name, phone regex, inline error and success reset",
+      "result": "pass"
+    },
+    {
+      "name": "reviews: stars, validation, safe DOM insertion, summary and no reload",
+      "result": "pass"
+    },
+    {
+      "name": "product: Swiper navigation and touch swipe",
+      "result": "pass"
+    },
+    {
+      "name": "index: file:// load, images, menu and popup",
+      "result": "pass"
+    },
+    {
+      "name": "about: file:// load, images, menu and popup",
+      "result": "pass"
+    },
+    {
+      "name": "product: file:// load, images, menu and popup",
+      "result": "pass"
+    }
+  ],
+  "html": [
+    {
+      "page": "index",
+      "doctype": "html",
+      "lang": "vi",
+      "charset": "UTF-8",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "h1": 1,
+      "landmarks": [
+        "header",
+        "nav",
+        "main",
+        "section",
+        "footer"
+      ],
+      "images": 42,
+      "controls": 2,
+      "missingAlts": [],
+      "missingLabels": [],
+      "unnamedForms": 0,
+      "duplicateIds": [],
+      "inlineHandlers": [],
+      "table": null,
+      "inlineStyles": 0
+    },
+    {
+      "page": "about",
+      "doctype": "html",
+      "lang": "vi",
+      "charset": "UTF-8",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "h1": 1,
+      "landmarks": [
+        "header",
+        "nav",
+        "main",
+        "section",
+        "footer"
+      ],
+      "images": 9,
+      "controls": 2,
+      "missingAlts": [],
+      "missingLabels": [],
+      "unnamedForms": 0,
+      "duplicateIds": [],
+      "inlineHandlers": [],
+      "table": null,
+      "inlineStyles": 0
+    },
+    {
+      "page": "product",
+      "doctype": "html",
+      "lang": "vi",
+      "charset": "UTF-8",
+      "viewport": "width=device-width, initial-scale=1.0",
+      "h1": 1,
+      "landmarks": [
+        "header",
+        "nav",
+        "main",
+        "section",
+        "footer"
+      ],
+      "images": 19,
+      "controls": 15,
+      "missingAlts": [],
+      "missingLabels": [],
+      "unnamedForms": 0,
+      "duplicateIds": [],
+      "inlineHandlers": [],
+      "table": {
+        "caption": true,
+        "rows": 9,
+        "headers": 9
+      },
+      "inlineStyles": 0
+    }
+  ],
+  "layouts": [
+    {
+      "page": "index",
+      "width": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 1
+    },
+    {
+      "page": "index",
+      "width": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 1
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 1
+    },
+    {
+      "page": "index",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 2
+    },
+    {
+      "page": "index",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 2
+    },
+    {
+      "page": "about",
+      "width": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": null
+    },
+    {
+      "page": "about",
+      "width": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": null
+    },
+    {
+      "page": "about",
+      "width": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": null
+    },
+    {
+      "page": "about",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": null
+    },
+    {
+      "page": "about",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": null
+    },
+    {
+      "page": "product",
+      "width": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 2
+    },
+    {
+      "page": "product",
+      "width": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 2
+    },
+    {
+      "page": "product",
+      "width": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 3
+    },
+    {
+      "page": "product",
+      "width": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 5
+    },
+    {
+      "page": "product",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflow": [],
+      "overflowX": "hidden",
+      "slider": 5
+    }
+  ],
+  "filePages": [
+    {
+      "page": "index",
+      "result": "pass"
+    },
+    {
+      "page": "about",
+      "result": "pass"
+    },
+    {
+      "page": "product",
+      "result": "pass"
+    }
+  ],
+  "errors": [],
+  "cdn": [
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "page": "index",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+      "status": 200
+    },
+    {
+      "page": "about",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "page": "about",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "page": "about",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "page": "about",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+      "status": 200
+    },
+    {
+      "page": "product",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "page": "product",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css",
+      "status": 200
+    },
+    {
+      "page": "product",
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "page": "product",
+      "url": "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js",
+      "status": 200
+    }
+  ]
+}

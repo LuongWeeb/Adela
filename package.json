@@ -1,0 +1,13 @@
+{
+  "name": "adela-vietnam-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Adela Việt Nam theo chuẩn Giáo án Front-End 7 ngày",
+  "scripts": {
+    "build:css": "sass assets/scss:assets/css --no-source-map --style=expanded",
+    "watch:css": "sass assets/scss:assets/css --watch --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.107.1"
+  }
+}

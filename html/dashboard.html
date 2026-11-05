@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tổng quan hoạt động kinh doanh Adela Việt Nam.">
+  <!-- Điền URL backend, ví dụ http://localhost:5000/api, để bật REST API. -->
+  <meta name="adela-api-base-url" content="">
+  <title>Tổng quan quản trị | Adela Việt Nam</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
+  <script src="../assets/js/api-service.js" defer></script>
+  <script src="../assets/js/admin-layout.js" defer></script>
+  <script src="../assets/js/dashboard-charts.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#overview">Đến nội dung chính</a>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6m2 4a5 5 0 0 1 3 5"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 10L3 7m9 5 9-5m-9 5v10M7 4.8l9 5v5"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M4 7h16l1 14H3Zm4 1V6a4 4 0 0 1 8 0v2"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-10m-6 0h6v6"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6"/><path d="m15 15 6 6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0v6l2 3H4l2-3Zm4 12h4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4M5 5l3 3m8 8 3 3M5 19l3-3m8-8 3-3"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 7a9 9 0 1 0 1 9M20 2v6h-6"/></symbol>
+  </svg>
+  <div class="admin-layout">
+    <aside class="admin-sidebar" id="admin-sidebar" aria-label="Điều hướng quản trị">
+      <a class="admin-brand" href="dashboard.html" aria-label="Adela Admin — Tổng quan"><span class="brand-mark">A<span>.</span></span><span class="sidebar-label"><strong>ADELA</strong><small>ADMIN WORKSPACE</small></span></a>
+      <button class="sidebar-close icon-button" id="sidebar-close" aria-label="Đóng menu">×</button>
+      <p class="nav-caption sidebar-label">KHÔNG GIAN QUẢN TRỊ</p>
+      <nav aria-label="Menu chính">
+        <a class="nav-item is-active" href="dashboard.html" aria-current="page" title="Tổng quan"><svg><use href="#i-grid"/></svg><span class="sidebar-label">Tổng quan</span></a>
+        <a class="nav-item" href="products-admin.html" title="Quản lý sản phẩm Adela"><svg><use href="#i-box"/></svg><span class="sidebar-label">Sản phẩm Adela</span></a>
+        <a class="nav-item" href="#recent-orders" title="Đơn hàng"><svg><use href="#i-bag"/></svg><span class="sidebar-label">Đơn hàng</span></a>
+        <button class="nav-item" data-notice="settings" title="Cài đặt"><svg><use href="#i-settings"/></svg><span class="sidebar-label">Cài đặt</span></button>
+      </nav>
+      <div class="sidebar-bottom"><div class="workspace-note sidebar-label"><span class="workspace-dot"></span> Adela Việt Nam<small>Không gian quản trị kinh doanh</small></div><a class="nav-item" href="index.html" title="Về trang bán hàng"><svg><use href="#i-arrow"/></svg><span class="sidebar-label">Về trang bán hàng</span></a></div>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+    <div class="admin-main" id="admin-main">
+      <header class="admin-header">
+        <button class="icon-button" id="sidebar-toggle" aria-label="Mở menu điều hướng" aria-controls="admin-sidebar" aria-expanded="false"><svg><use href="#i-menu"/></svg></button>
+        <form class="admin-search" id="order-search" role="search" aria-label="Tìm kiếm đơn hàng gần đây"><svg aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="search-input">Tìm mã đơn, khách hàng hoặc sản phẩm</label><input id="search-input" type="search" placeholder="Tìm đơn hàng, khách hàng…" autocomplete="off"><button class="sr-only" type="submit">Tìm kiếm</button></form>
+        <div class="header-actions"><a class="store-link" href="index.html">Trang chủ <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><button class="icon-button notification-button" data-notice="notifications" aria-label="Xem thông báo"><svg><use href="#i-bell"/></svg><span></span></button><div class="admin-profile"><span class="avatar" aria-hidden="true">AD</span><div><strong>Adela Admin</strong><small>Quản trị viên</small></div></div></div>
+      </header>
+      <main class="dashboard-content" id="overview" tabindex="-1">
+        <div class="page-heading"><div><p class="eyebrow">ADELA VIỆT NAM / TỔNG QUAN</p><h1>Tổng quan kinh doanh</h1><p>Chào mừng trở lại. Cùng nhìn lại hoạt động kinh doanh của bạn.</p></div><button class="refresh-button" id="refresh-data"><svg aria-hidden="true"><use href="#i-refresh"/></svg>Làm mới dữ liệu</button></div>
+        <div class="data-toolbar"><span class="connection-status" id="connection-status" role="status">Đang khởi tạo dữ liệu…</span><span id="report-period">Báo cáo mẫu · Tháng 12/2025</span></div>
+        <p class="dashboard-error" id="dashboard-error" role="alert" hidden></p>
+        <section class="kpi-grid" aria-label="Chỉ số kinh doanh tháng báo cáo">
+          <article class="kpi-card"><div class="kpi-top"><h2>Tổng doanh thu</h2><span class="kpi-icon"><svg aria-hidden="true"><use href="#i-trend"/></svg></span></div><p class="kpi-value" id="kpi-revenue">1.280.000.000₫</p><p class="kpi-detail"><span class="positive" id="kpi-growth">+12,5%</span> so với tháng trước</p><span class="kpi-accent"></span></article>
+          <article class="kpi-card"><div class="kpi-top"><h2>Đơn hàng mới</h2><span class="kpi-icon gold"><svg aria-hidden="true"><use href="#i-bag"/></svg></span></div><p class="kpi-value"><span id="kpi-orders">148</span><small>đơn</small></p><p class="kpi-detail"><span class="positive" id="kpi-delivered">85%</span> đã giao thành công</p></article>
+          <article class="kpi-card"><div class="kpi-top"><h2>Khách hàng mới</h2><span class="kpi-icon green"><svg aria-hidden="true"><use href="#i-users"/></svg></span></div><p class="kpi-value"><span id="kpi-customers">326</span><small>khách</small></p><p class="kpi-detail"><span class="positive" id="kpi-customer-growth">+18%</span> so với tháng trước</p></article>
+          <article class="kpi-card"><div class="kpi-top"><h2>Tủ tồn kho</h2><span class="kpi-icon red"><svg aria-hidden="true"><use href="#i-box"/></svg></span></div><p class="kpi-value"><span id="kpi-inventory">42</span><small>chiếc</small></p><p class="kpi-detail"><span class="inventory-note" id="kpi-stock-note">Cần nhập thêm 3 mẫu</span></p></article>
+        </section>
+        <section class="charts-grid" aria-label="Phân tích kinh doanh">
+          <article class="panel revenue-panel"><div class="panel-heading"><div><h2>Doanh thu 12 tháng</h2><p>Hiệu quả kinh doanh qua từng tháng</p></div><span class="period-chip" id="chart-year">2025</span></div><div class="revenue-summary"><strong id="annual-revenue">12,10 tỷ ₫</strong><span>Tổng doanh thu năm</span></div><div class="chart-container"><canvas id="revenue-chart" role="img" aria-label="Biểu đồ doanh thu 12 tháng. Dữ liệu chi tiết ở bảng bên dưới."></canvas></div><details class="chart-details"><summary>Xem số liệu doanh thu</summary><div class="table-scroll"><table><caption class="sr-only">Doanh thu từng tháng, đơn vị đồng</caption><thead><tr><th scope="col">Tháng</th><th scope="col">Doanh thu</th></tr></thead><tbody id="revenue-data"></tbody></table></div></details></article>
+          <article class="panel category-panel"><div class="panel-heading"><div><h2>Cơ cấu doanh số</h2><p>Tỷ trọng theo nhóm sản phẩm</p></div></div><div class="doughnut-container"><canvas id="category-chart" role="img" aria-label="Cơ cấu doanh số. Tỷ lệ từng nhóm được liệt kê bên dưới."></canvas><div class="doughnut-center" aria-hidden="true"><strong>100<span>%</span></strong><small>DOANH SỐ</small></div></div><ul class="category-legend" id="category-legend"></ul><p class="chart-note">Ly &amp; Phụ kiện gồm ly rượu vang, decanter và các phụ kiện khác.</p></article>
+        </section>
+        <section class="panel orders-panel" id="recent-orders" aria-labelledby="orders-heading"><div class="panel-heading"><div><h2 id="orders-heading">Giao dịch gần đây</h2><p>5 đơn hàng mới nhất của Adela</p></div><span class="order-count" id="order-count" role="status">Đang tải…</span></div><div class="table-scroll" tabindex="0" role="region" aria-label="Bảng đơn hàng, có thể cuộn ngang"><table class="orders-table"><caption class="sr-only">Danh sách giao dịch gần đây</caption><thead><tr><th scope="col">Mã đơn hàng</th><th scope="col">Khách hàng</th><th scope="col">Sản phẩm</th><th scope="col">Ngày đặt</th><th scope="col">Giá trị</th><th scope="col">Trạng thái</th></tr></thead><tbody id="orders-body" aria-busy="true"><tr><td colspan="6" class="table-message"><span class="loading-spinner" aria-hidden="true"></span> Đang tải giao dịch…</td></tr></tbody></table></div><p class="table-footer" id="table-footer">Dữ liệu minh họa phục vụ đào tạo. Không phải giao dịch thực tế.</p></section>
+        <footer class="dashboard-footer"><span>© Adela Việt Nam</span><span>Không gian quản trị · Kết nối mọi hoạt động</span></footer>
+        <noscript><p class="dashboard-error">Vui lòng bật JavaScript để tải dữ liệu và biểu đồ.</p></noscript>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.top-bar {
+  background: $color-navy;
+  color: $color-white;
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.top-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  color: $color-gold;
+}
+
+.social span {
+  border: 1px solid $color-gold;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 23px;
+}
+
+.top-contact {
+  color: $color-gold;
+}
+
+.site-header {
+  background: $color-gray-bg;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 0;
+  min-height: 76px;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.logo {
+  width: 170px;
+  flex-shrink: 0;
+}
+
+.search {
+  display: flex;
+  margin-left: auto;
+  width: 49%;
+  height: 38px;
+  border: 1px solid #c9cdd5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.search input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 8px 10px;
+}
+
+.search button {
+  flex-shrink: 0;
+  background: $color-navy;
+  color: $color-gold;
+  width: 38px;
+  font-size: 22px;
+}
+
+.header-action {
+  color: $color-navy;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@mixin responsive {
+  @media (max-width: 429px) {
+    .promo-detail {
+      display: none;
+    }
+  }
+  @include respond-to('layout-tablet') {
+    .top-contact {
+      display: none;
+    }
+
+    .header-row {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .search {
+      width: auto;
+      flex: 1;
+    }
+
+    .header-action {
+      font-size: 13px;
+    }
+  }
+
+  @include respond-to('layout-mobile') {
+    .top-inner {
+      justify-content: center;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    .top-inner .social {
+      display: none;
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    .search {
+      order: 4;
+      flex-basis: 100%;
+    }
+
+    .header-action {
+      margin-left: auto;
+      font-size: 12px;
+    }
+  }
+}

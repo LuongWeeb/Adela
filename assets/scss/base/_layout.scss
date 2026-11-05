@@ -1,0 +1,97 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.container {
+  width: calc(100% - 40px);
+  max-width: $container-max-width;
+  margin: auto;
+}
+
+.section {
+  padding: $section-spacing 0;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+
+  @include respond-from('layout-mobile') {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.two-columns > *, .footer-grid > *, .support-grid > * {
+  min-width: 0;
+}
+
+.light-section {
+  background: $color-gray-bg;
+}
+
+.form-status {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.field-error {
+  color: #b91c1c;
+  font-size: 13px;
+  margin: 5px 0 10px;
+}
+
+.consult-card .field-error, .footer .field-error {
+  color: #ffe0e0;
+  text-align: left;
+}
+
+[aria-invalid='true'], .consult-card [aria-invalid='true'], .review-form-box [aria-invalid='true'] {
+  outline: 2px solid #d62828;
+  outline-offset: -2px;
+}
+
+.swal2-container {
+  z-index: 11000;
+}
+
+@mixin responsive {
+  @include respond-to('layout-mobile') {
+    .container {
+      width: calc(100% - 28px);
+    }
+
+    .section {
+      padding: $section-spacing-mobile 0;
+    }
+
+  }
+}
+
+// Keep form helpers after page rules, as in the original stylesheets.
+@mixin form-accessibility {
+  .field-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .field-group {
+    min-width: 0;
+  }
+
+  .consult-card .field-label {
+    color: $color-white;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}

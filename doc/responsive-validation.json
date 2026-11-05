@@ -1,0 +1,822 @@
+{
+  "date": "2026-11-02",
+  "browser": "Installed Google Chrome, headless, viewport emulation",
+  "layouts": [
+    {
+      "page": "index",
+      "width": 375,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": 2,
+        ".product-grid": 2,
+        ".news-grid": 1,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 430,
+      "viewport": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": 3,
+        ".product-grid": 2,
+        ".news-grid": 1,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 599,
+      "viewport": 599,
+      "scrollWidth": 599,
+      "bodyScrollWidth": 599,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": 3,
+        ".product-grid": 2,
+        ".news-grid": 1,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 600,
+      "viewport": 600,
+      "scrollWidth": 600,
+      "bodyScrollWidth": 600,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": 3,
+        ".product-grid": 3,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": 3,
+        ".product-grid": 3,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 769,
+      "viewport": 769,
+      "scrollWidth": 769,
+      "bodyScrollWidth": 769,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": 3,
+        ".product-grid": 3,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 1001,
+      "viewport": 1001,
+      "scrollWidth": 1001,
+      "bodyScrollWidth": 1001,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": 3,
+        ".product-grid": 3,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 1024,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": 6,
+        ".product-grid": 5,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 1366,
+      "viewport": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": 6,
+        ".product-grid": 5,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "index",
+      "width": 1920,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": 6,
+        ".product-grid": 5,
+        ".news-grid": 3,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 375,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 1,
+        ".spec-consult-section": 1,
+        ".related-grid": 2
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 430,
+      "viewport": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 1,
+        ".spec-consult-section": 1,
+        ".related-grid": 2
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 599,
+      "viewport": 599,
+      "scrollWidth": 599,
+      "bodyScrollWidth": 599,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 1,
+        ".spec-consult-section": 1,
+        ".related-grid": 2
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 600,
+      "viewport": 600,
+      "scrollWidth": 600,
+      "bodyScrollWidth": 600,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 2,
+        ".spec-consult-section": 2,
+        ".related-grid": 3
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 768,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 2,
+        ".spec-consult-section": 2,
+        ".related-grid": 3
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 769,
+      "viewport": 769,
+      "scrollWidth": 769,
+      "bodyScrollWidth": 769,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 2,
+        ".spec-consult-section": 2,
+        ".related-grid": 3
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 1001,
+      "viewport": 1001,
+      "scrollWidth": 1001,
+      "bodyScrollWidth": 1001,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 2,
+        ".spec-consult-section": 2,
+        ".related-grid": 3
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 1024,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 3,
+        ".spec-consult-section": 2,
+        ".related-grid": 5
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 1366,
+      "viewport": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 3,
+        ".spec-consult-section": 2,
+        ".related-grid": 5
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "product",
+      "width": 1920,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": null,
+        "#showrooms": null,
+        ".locations .two-columns": null,
+        ".product-detail-top": 3,
+        ".spec-consult-section": 2,
+        ".related-grid": 5
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 375,
+      "viewport": 375,
+      "scrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 1,
+        "#showrooms": 1,
+        ".locations .two-columns": 1,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 430,
+      "viewport": 430,
+      "scrollWidth": 430,
+      "bodyScrollWidth": 430,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 1,
+        "#showrooms": 1,
+        ".locations .two-columns": 1,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 599,
+      "viewport": 599,
+      "scrollWidth": 599,
+      "bodyScrollWidth": 599,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 1,
+        "#showrooms": 1,
+        ".locations .two-columns": 1,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 600,
+      "viewport": 600,
+      "scrollWidth": 600,
+      "bodyScrollWidth": 600,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 768,
+      "viewport": 768,
+      "scrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "flex",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 769,
+      "viewport": 769,
+      "scrollWidth": 769,
+      "bodyScrollWidth": 769,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 1001,
+      "viewport": 1001,
+      "scrollWidth": 1001,
+      "bodyScrollWidth": 1001,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 1024,
+      "viewport": 1024,
+      "scrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 1366,
+      "viewport": 1366,
+      "scrollWidth": 1366,
+      "bodyScrollWidth": 1366,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    },
+    {
+      "page": "about",
+      "width": 1920,
+      "viewport": 1920,
+      "scrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflow": [],
+      "localOverflow": [],
+      "hamburger": "none",
+      "columns": {
+        ".category-grid": null,
+        ".product-grid": null,
+        ".news-grid": null,
+        ".timeline": 4,
+        "#showrooms": 2,
+        ".locations .two-columns": 2,
+        ".product-detail-top": null,
+        ".spec-consult-section": null,
+        ".related-grid": null
+      },
+      "brokenImages": 0
+    }
+  ],
+  "interactions": [
+    {
+      "page": "index",
+      "width": 375,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "index",
+      "width": 430,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "product",
+      "width": 375,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "product",
+      "width": 430,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "product",
+      "width": 768,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "about",
+      "width": 375,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "about",
+      "width": 430,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    },
+    {
+      "page": "about",
+      "width": 768,
+      "result": "pass",
+      "checks": [
+        "open",
+        "close button",
+        "overlay",
+        "Escape",
+        "link",
+        "focus trap",
+        "focus return",
+        "background inert",
+        "scroll lock",
+        "resize reset"
+      ]
+    }
+  ],
+  "errors": []
+}

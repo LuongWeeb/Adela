@@ -1,0 +1,242 @@
+{
+  "date": "2026-11-03",
+  "status": "passed",
+  "browser": "Installed Chrome headless; real Chart.js and SweetAlert2 CDN",
+  "checks": [
+    {
+      "name": "Real CDN libraries, KPI, charts, five orders and accessible data",
+      "result": "pass"
+    },
+    {
+      "name": "Revenue hover tooltip formats VND",
+      "result": "pass"
+    },
+    {
+      "name": "Responsive layouts and desktop collapse",
+      "result": "pass"
+    },
+    {
+      "name": "Mobile drawer: focus trap, Escape, overlay, navigation and breakpoint",
+      "result": "pass"
+    },
+    {
+      "name": "Search, empty state, refresh and SweetAlert notification",
+      "result": "pass"
+    },
+    {
+      "name": "Mock CRUD, query, immutable IDs, conflict/not-found and persistence",
+      "result": "pass"
+    },
+    {
+      "name": "REST API GET/POST/PUT/DELETE, query encoding, headers, 201 and 204",
+      "result": "pass"
+    },
+    {
+      "name": "HTTP 400/404/500 and invalid JSON reject without mutating mock data",
+      "result": "pass"
+    },
+    {
+      "name": "Network fallback, retry recovery and request timeout",
+      "result": "pass"
+    },
+    {
+      "name": "Corrupt storage recovery and safe rendering of untrusted order text",
+      "result": "pass"
+    },
+    {
+      "name": "Storage disabled: memory fallback remains usable",
+      "result": "pass"
+    },
+    {
+      "name": "Missing Chart.js degrades to accessible data without runtime exception",
+      "result": "pass"
+    },
+    {
+      "name": "Direct file opening",
+      "result": "pass"
+    }
+  ],
+  "layouts": [
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "kpiClipped": false,
+      "columns": 1,
+      "sidebarInert": true
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "kpiClipped": false,
+      "columns": 1,
+      "sidebarInert": true
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "kpiClipped": false,
+      "columns": 2,
+      "sidebarInert": true
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "kpiClipped": false,
+      "columns": 2,
+      "sidebarInert": true
+    },
+    {
+      "width": 1025,
+      "scrollWidth": 1025,
+      "kpiClipped": false,
+      "columns": 2,
+      "sidebarInert": false
+    },
+    {
+      "width": 1366,
+      "scrollWidth": 1366,
+      "kpiClipped": false,
+      "columns": 4,
+      "sidebarInert": false
+    },
+    {
+      "width": 1920,
+      "scrollWidth": 1920,
+      "kpiClipped": false,
+      "columns": 4,
+      "sidebarInert": false
+    }
+  ],
+  "errors": [],
+  "expectedErrors": [
+    {
+      "type": "requestfailed",
+      "url": "http://127.0.0.1:52308/test-api/customers/id%20with%20space",
+      "message": "net::ERR_ABORTED"
+    },
+    {
+      "type": "http",
+      "status": 400,
+      "url": "http://127.0.0.1:52308/test-api/customers"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    },
+    {
+      "type": "http",
+      "status": 404,
+      "url": "http://127.0.0.1:52308/test-api/customers"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "type": "http",
+      "status": 500,
+      "url": "http://127.0.0.1:52308/test-api/customers"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "type": "http",
+      "status": 500,
+      "url": "http://127.0.0.1:52308/test-api/dashboard"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "type": "requestfailed",
+      "url": "http://127.0.0.1:52308/test-api/dashboard",
+      "message": "net::ERR_FAILED"
+    },
+    {
+      "type": "console",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "type": "requestfailed",
+      "url": "http://127.0.0.1:52308/test-api/dashboard",
+      "message": "net::ERR_ABORTED"
+    }
+  ],
+  "cdn": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js",
+      "status": 200
+    }
+  ]
+}

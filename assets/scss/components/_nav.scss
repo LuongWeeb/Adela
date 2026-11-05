@@ -1,0 +1,475 @@
+@use '../abstracts/variables' as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 45px;
+}
+
+.hamburger-btn, .nav-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  background: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-btn {
+  flex-direction: column;
+  gap: 5px;
+  color: $color-navy;
+}
+
+.hamburger-btn .bar {
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  max-width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  padding: 16px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #0e1e36;
+  color: $color-white;
+  z-index: 9999;
+  visibility: hidden;
+  transition: left 0.3s ease, visibility 0s 0.3s;
+
+  &.open {
+    left: 0;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+
+  a {
+    display: block;
+    padding: 14px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-gold;
+    }
+  }
+}
+
+.nav-close-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-logo {
+  font: bold 36px $font-heading;
+
+  sup {
+    font: bold 12px $font-body;
+    color: $color-gold;
+  }
+}
+
+.nav-close-btn {
+  font-size: 24px;
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ========================================================
+   DROPDOWN MENU: SẢN PHẨM & DROPDOWN PANEL
+   ======================================================== */
+
+.dropdown-arrow {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 11px;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.has-dropdown {
+  position: relative;
+
+  &:hover > a .dropdown-arrow,
+  &.active > a .dropdown-arrow {
+    transform: rotate(180deg);
+    color: $color-gold;
+  }
+
+  // Mobile menu dropdown
+  .dropdown-menu {
+    list-style: none;
+    padding: 0 0 0 16px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 2px solid $color-gold;
+    display: none;
+
+    &.open {
+      display: block;
+    }
+
+    li a {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      i {
+        font-size: 13px;
+        color: $color-gold;
+        width: 16px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ========================================================
+   NAV-NOTE & DROPDOWNS: CHỌN CỬA HÀNG & XEM BÁO GIÁ
+   ======================================================== */
+
+.nav-notes-group {
+  display: none;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-note-dropdown {
+  position: relative;
+
+  &:hover .nav-note .dropdown-arrow,
+  &.active .nav-note .dropdown-arrow {
+    transform: rotate(180deg);
+    color: $color-gold;
+  }
+}
+
+.nav-note {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 0;
+  color: #777;
+  line-height: 1.25;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  i {
+    margin-right: 4px;
+    color: $color-navy;
+  }
+
+  strong {
+    color: $color-text-dark;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &:hover {
+    color: $color-navy;
+
+    strong {
+      color: $color-gold;
+    }
+
+    i {
+      color: $color-gold;
+    }
+  }
+}
+
+// Khung cửa sổ Dropdown Panel (Showrooms & Báo giá)
+.dropdown-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 330px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(5, 35, 82, 0.16);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  border-top: 3px solid $color-gold;
+  padding: 16px;
+  z-index: 1002;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all 0.28s cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+
+  .panel-header {
+    font-size: 13px;
+    font-weight: 700;
+    color: $color-navy;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #edf0f5;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      color: $color-gold;
+      font-size: 14px;
+    }
+  }
+
+  .panel-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li {
+      font-size: 12px;
+      color: #555;
+      line-height: 1.35;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed #f0f2f5;
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      strong {
+        color: $color-navy;
+        font-size: 12.5px;
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      p {
+        margin: 2px 0 4px;
+        color: #666;
+      }
+
+      a {
+        color: $color-gold;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+
+        &:hover {
+          color: $color-navy;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .panel-footer {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #edf0f5;
+    text-align: right;
+
+    a {
+      font-size: 12px;
+      font-weight: 700;
+      color: $color-navy;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+}
+
+// Nhãn chính sách vận chuyển (Shipping Tags)
+.shipping-tag {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+  letter-spacing: 0.3px;
+
+  &.tag-free {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid rgba(46, 125, 50, 0.2);
+  }
+
+  &.tag-standard {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid rgba(21, 101, 192, 0.2);
+  }
+
+  &.tag-vip {
+    background: #fff8e1;
+    color: #e65100;
+    border: 1px solid rgba(230, 81, 0, 0.2);
+  }
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS (DESKTOP TỪ 769px TRỞ LÊN)
+   ======================================================== */
+
+@media (min-width: 769px) {
+  .hamburger-btn, .nav-close-wrapper, .nav-overlay { display: none; }
+
+  .nav-menu {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    visibility: visible;
+    transition: none;
+    z-index: auto;
+
+    > li > a {
+      padding: 12px 0;
+      position: relative;
+    }
+  }
+
+  // Desktop Dropdown menu: bay xuống mượt mà khi hover
+  .has-dropdown {
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 260px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 16px 36px rgba(5, 35, 82, 0.16);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-top: 3px solid $color-gold;
+      padding: 10px 0;
+      z-index: 1001;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all 0.28s cubic-bezier(0.165, 0.84, 0.44, 1);
+      pointer-events: none;
+      display: block;
+
+      li {
+        display: block;
+        width: 100%;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          padding: 11px 20px;
+          color: $color-navy;
+          font-size: 13.5px;
+          font-weight: 600;
+          text-transform: none;
+          transition: all 0.2s ease;
+
+          i {
+            color: $color-gold;
+            font-size: 14px;
+            width: 18px;
+            text-align: center;
+            transition: transform 0.2s ease;
+          }
+
+          &:hover {
+            background: #f4f7fb;
+            color: $color-gold;
+            padding-left: 24px;
+
+            i {
+              transform: scale(1.15);
+            }
+          }
+        }
+      }
+    }
+
+    &:hover > .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+
+  // Desktop Hover mở Showroom & Báo giá
+  .nav-note-dropdown {
+    &:hover > .dropdown-panel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}
+
+@media (min-width: 1001px) {
+  .nav-menu {
+    width: auto;
+    gap: 44px;
+  }
+
+  .nav-notes-group {
+    display: flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-menu, .nav-overlay, .dropdown-menu, .dropdown-panel, .dropdown-arrow {
+    transition: none;
+  }
+}

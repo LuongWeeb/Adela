@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Về Adela Việt Nam - Giới thiệu & Showroom chính hãng</title>
+    <meta name="description" content="Adela Việt Nam - Thương hiệu phân phối tủ bảo quản xì gà, tủ rượu vang và ly pha lê Riedel cao cấp tại Việt Nam." />
+    <!-- Thư viện Font & Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="../assets/css/about.css" />
+      <!-- Google Fonts: Montserrat & Roboto (Chuẩn thiết kế Figma Adela) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="container top-inner">
+        <div class="social" aria-label="Mạng xã hội">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+        </div>
+        <p>Tiết kiệm 20% khi sử dụng mã: <strong>ADELAVIETNAM20</strong></p>
+        <p class="top-contact"><a class="hotline-link" href="tel:0321456987"><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>0321 456 987</strong></a> &nbsp; <i class="fa-solid fa-envelope" aria-hidden="true"></i> info@adelavietnam.vn</p>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container">
+        <div class="header-row">
+          <a class="logo" href="index.html"
+            ><img
+              src="../assets/images/logo.png"
+              alt="Adela Việt Nam"
+              width="169"
+              height="58"
+          /></a>
+          <form class="search demo-form" aria-label="Tìm kiếm sản phẩm">
+            <label class="visually-hidden" for="site-search">Tìm kiếm sản phẩm</label>
+            <input
+              name="site-search" 
+              id="site-search"              
+              type="search"
+              aria-label="Tìm kiếm sản phẩm"
+              placeholder="Tìm kiếm sản phẩm"
+            /><button aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+          </form>
+          <span class="header-action"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Giỏ hàng <span class="cart-count" aria-label="0 sản phẩm">0</span></span
+          ><span class="header-action"><i class="fa-regular fa-user" aria-hidden="true"></i> Tài khoản</span>
+        </div>
+        <nav class="nav" aria-label="Menu chính">
+          <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-close-wrapper">
+              <span class="nav-logo">Adela<sup>VN</sup></span>
+              <button type="button" class="nav-close-btn" id="nav-close-btn" aria-label="Đóng menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            </li>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="about.html" class="active">VỀ ADELA</a></li>
+            <li class="has-dropdown">
+              <a href="product.html">SẢN PHẨM <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="product.html#tu-bao-quan"><i class="fa-solid fa-wine-bottle" aria-hidden="true"></i> Tủ bảo quản rượu vang</a></li>
+                <li><a href="product.html#tu-cigar"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Tủ bảo quản Cigar cao cấp</a></li>
+                <li><a href="product.html#ly-ruou-vang"><i class="fa-solid fa-wine-glass" aria-hidden="true"></i> Ly rượu vang pha lê Riedel</a></li>
+                <li><a href="product.html#decanter"><i class="fa-solid fa-flask" aria-hidden="true"></i> Bình chiết Decanter nghệ thuật</a></li>
+                <li><a href="product.html#phu-kien"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Phụ kiện & Dụng cụ mở vang</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#tin-tuc">TIN TỨC</a></li>
+            <li><a href="#lien-he">LIÊN HỆ</a></li>
+          </ul>
+
+          <div class="nav-notes-group">
+            <div class="nav-note-dropdown">
+              <a class="nav-note" href="about.html#showrooms" role="button" aria-expanded="false">
+                <i class="fa-solid fa-store" aria-hidden="true"></i> Bạn muốn tự đến lấy hàng?<br />
+                <strong>Chọn cửa hàng <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i></strong>
+              </a>
+              <div class="dropdown-panel showroom-panel">
+                <div class="panel-header"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Hệ thống Showroom Adela</div>
+                <ul class="panel-list">
+                  <li>
+                    <strong>Showroom Hà Nội:</strong>
+                    <p>Số 123 Tây Mỗ, Nam Từ Liêm, Hà Nội</p>
+                    <a href="tel:0987654321"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4321</a>
+                  </li>
+                  <li>
+                    <strong>Showroom TP. Hồ Chí Minh:</strong>
+                    <p>Số 456 Lê Duẩn, P. Bến Nghé, Quận 1, TP.HCM</p>
+                    <a href="tel:0987654322"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4322</a>
+                  </li>
+                  <li>
+                    <strong>Showroom Đà Nẵng:</strong>
+                    <p>Số 789 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng</p>
+                    <a href="tel:0987654323"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4323</a>
+                  </li>
+                </ul>
+                <div class="panel-footer">
+                  <a href="about.html#showrooms">Xem bản đồ chỉ đường &raquo;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-note-dropdown">
+              <a class="nav-note" href="product.html#tu-van" role="button" aria-expanded="false">
+                <i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Bạn cần giao hàng tận nơi?<br />
+                <strong>Xem báo giá <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i></strong>
+              </a>
+              <div class="dropdown-panel shipping-panel">
+                <div class="panel-header"><i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i> Báo giá & Chính sách giao hàng</div>
+                <ul class="panel-list">
+                  <li>
+                    <span class="shipping-tag tag-free">Miễn phí 100%</span>
+                    <strong>Hỏa tốc 2 Giờ (Nội thành HN & TP.HCM)</strong>
+                    <p>Giao nguyên kiện tủ rượu, cigar bằng ô tô chuyên dụng.</p>
+                  </li>
+                  <li>
+                    <span class="shipping-tag tag-standard">Đồng giá 150K</span>
+                    <strong>Vận chuyển toàn quốc (24h - 48h)</strong>
+                    <p>Đóng thùng gỗ bảo hiểm rơi vỡ, đổi mới ngay lập tức.</p>
+                  </li>
+                  <li>
+                    <span class="shipping-tag tag-vip">VIP</span>
+                    <strong>Lắp đặt & Test độ ẩm tận nhà</strong>
+                    <p>Chuyên viên kỹ thuật bàn giao và nghiệm thu trực tiếp.</p>
+                  </li>
+                </ul>
+                <div class="panel-footer">
+                  <a href="product.html#tu-van">Nhận tư vấn báo giá chi tiết &raquo;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 1. INTRO SECTION -->
+      <section class="section container two-columns intro" data-aos="fade-up">
+        <div data-aos="fade-right">
+          <h1 class="gold-line">VỀ ADELA VIỆT NAM</h1>
+          <p>
+            Adela Việt Nam tự hào là đơn vị tiên phong tại Việt Nam chuyên cung cấp các giải pháp bảo quản xì gà và rượu vang đạt chuẩn quốc tế. Với hành trình hơn 10 năm phát triển, chúng tôi cam kết mang tới cho quý khách hàng những sản phẩm nhập khẩu chính hãng, tinh xảo và đẳng cấp nhất.
+          </p>
+          <p>
+            Mỗi chiếc tủ rượu, tủ cigar tại Adela đều là một tác phẩm nghệ thuật, kết hợp hoàn hảo giữa công nghệ kiểm soát nhiệt ẩm tiên tiến và ngôn ngữ thiết kế sang trọng, nâng tầm không gian sống của giới thượng lưu.
+          </p>
+          <div class="stats">
+            <div><strong>10+</strong>Năm hoạt động</div>
+            <div><strong>10.000+</strong>Khách hàng VIP</div>
+            <div><strong>50+</strong>Cửa hàng & Đối tác</div>
+            <div><strong>150+</strong>Dự án hầm rượu</div>
+          </div>
+        </div>
+        <img data-aos="fade-left" src="../assets/images/about-collage.png" alt="Bộ sưu tập tủ rượu vang Adela" />
+      </section>
+
+      <!-- 2. HISTORY TIMELINE -->
+      <section class="section history" data-aos="fade-up">
+        <div class="container">
+          <div class="center-title">
+            <h2>LỊCH SỬ HÌNH THÀNH PHÁT TRIỂN</h2>
+            <p>
+              <strong>Công ty ADELA Việt Nam</strong> được thành lập năm 2013 với sứ mệnh kiến tạo chuẩn mực bảo quản rượu vang & xì gà số 1 Việt Nam.
+            </p>
+          </div>
+          <div class="timeline">
+            <article data-aos="zoom-in" data-aos-delay="100">
+              <h3>2009</h3>
+              <p>Ấp ủ ý tưởng, mong muốn cho ra mắt một công ty chuyên cung cấp tủ bảo quản rượu vang hàng đầu Việt Nam.</p>
+            </article>
+            <article data-aos="zoom-in" data-aos-delay="200">
+              <h3>2012 - 2015</h3>
+              <p>Giai đoạn phát triển mạnh mẽ của Adela Việt Nam khi mở rộng quy mô kho vận tại Hà Nội và TP. Hồ Chí Minh.</p>
+            </article>
+            <article data-aos="zoom-in" data-aos-delay="300">
+              <h3>2015 - 2020</h3>
+              <p>Đặt nền móng đối tác chiến lược phân phối độc quyền các thương hiệu Vinocave, Golden Fire và ly pha lê Riedel.</p>
+            </article>
+            <article data-aos="zoom-in" data-aos-delay="400">
+              <h3>2020 - Nay</h3>
+              <p>Vươn tầm vị thế dẫn đầu thị trường với chính sách bảo hành 6 năm tại nhà, phục vụ hàng chục ngàn khách hàng thượng lưu.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. SERVICES SECTION -->
+      <section class="section container" data-aos="fade-up">
+        <div class="center-title">
+          <h2>SẢN PHẨM & DỊCH VỤ</h2>
+          <p>Adela Việt Nam hân hạnh mang đến cho bạn những trải nghiệm thưởng thức tinh tế nhất</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="50">
+            <h3><img src="../assets/images/category-1.png" alt="Tủ rượu vang" /> Tủ rượu vang</h3>
+            <p>Hệ thống tủ ủ rượu cao cấp công nghệ làm lạnh máy nén Inverter êm ái, kiểm soát nhiệt độ 5°C - 18°C chuẩn hầm rượu Pháp.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <h3><img src="../assets/images/category-2.png" alt="Tủ Cigar" /> Tủ Cigar</h3>
+            <p>Khay gỗ tuyết tùng Tây Ban Nha nhập khẩu, hệ thống bù ẩm tự động đa điểm duy trì độ ẩm vàng 68% - 72% cho điếu cigar hoàn hảo.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+            <h3><img src="../assets/images/category-3.png" alt="Ly rượu vang" /> Ly rượu vang</h3>
+            <p>Bộ sưu tập ly pha lê không chì Riedel (Cộng hòa Áo) thổi thủ công, định hình cấu trúc hương vị đặc trưng cho từng giống nho.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <h3><img src="../assets/images/category-4.png" alt="Decanter" /> Decanter</h3>
+            <p>Bình thở rượu vang Decanter nghệ thuật giúp vang oxy hóa nhanh, bung tỏa tầng tầng lớp lớp hương hoa trái nồng nàn.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+            <h3><img src="../assets/images/category-5.png" alt="Khui rượu vang" /> Khui rượu vang</h3>
+            <p>Dụng cụ mở rượu vang cao cấp Pulltex, Durand, Coravin mạ bạc tinh xảo, rút nút bần cổ nhẹ nhàng không làm vỡ vụn.</p>
+          </div>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <h3><img src="../assets/images/category-6.png" alt="Phụ kiện khác" /> Phụ kiện khác</h3>
+            <p>Bao da cigar cao cấp, máy đo độ ẩm kỹ thuật số, nắp hút chân không bảo quản rượu sau khi mở nắp.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. POLICIES SECTION -->
+      <section class="section policies" data-aos="fade-up">
+        <div class="container">
+          <div class="center-title">
+            <h2>CHÍNH SÁCH HẬU MÃI</h2>
+          </div>
+          <div class="policy-grid">
+            <div class="policy-item" data-aos="zoom-in" data-aos-delay="100">
+              <div class="policy-icon"><i class="fa-solid fa-truck-fast"></i></div>
+              <h4>Miễn phí vận chuyển</h4>
+            </div>
+            <div class="policy-item" data-aos="zoom-in" data-aos-delay="200">
+              <div class="policy-icon"><i class="fa-solid fa-credit-card"></i></div>
+              <h4>Trả góp lãi suất 0%</h4>
+            </div>
+            <div class="policy-item" data-aos="zoom-in" data-aos-delay="300">
+              <div class="policy-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+              <h4>Nâng cấp dễ dàng</h4>
+            </div>
+            <div class="policy-item" data-aos="zoom-in" data-aos-delay="400">
+              <div class="policy-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h4>Bảo trì trọn đời</h4>
+            </div>
+            <div class="policy-item" data-aos="zoom-in" data-aos-delay="500">
+              <div class="policy-icon"><i class="fa-solid fa-award"></i></div>
+              <h4>Bảo hành 6 năm</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. LOCATIONS & VOUCHERS SECTION -->
+      <section class="section locations" data-aos="fade-up">
+        <div class="container two-columns">
+          <div data-aos="fade-right">
+            <h2>ADELA VIỆT NAM NAY ĐÃ CÓ KHO GIAO HÀNG Ở "HÀ NỘI – HỒ CHÍ MINH"</h2>
+            <ul>
+              <li>Tiết kiệm tối đa chi phí vận chuyển liên tỉnh</li>
+              <li>Giao hàng hỏa tốc trong 2 giờ nội thành</li>
+              <li>Xe chuyên dụng bảo hiểm rơi vỡ hỏng hóc 100%</li>
+              <li>Dịch vụ kỹ thuật viên lắp đặt và cân chỉnh độ ẩm tận nhà</li>
+            </ul>
+            <div class="vouchers">
+              <p>Voucher <strong>KHUYẾN MẠI</strong></p>
+              <p>Voucher <strong>FREESHIP</strong></p>
+              <p>Quà tặng <strong>HẤP DẪN</strong></p>
+            </div>
+          </div>
+          <img data-aos="fade-left" src="../assets/images/about-cabinet.png" alt="Kho vận Adela Việt Nam" />
+        </div>
+      </section>
+
+      <!-- 6. SHOWROOMS SECTION -->
+      <section class="section container two-columns" id="showrooms" data-aos="fade-up">
+        <div class="showroom" data-aos="fade-right">
+          <h2>VĂN PHÒNG - SHOWROOM TP HÀ NỘI</h2>
+          <p>📍 Số 123 Tây Mỗ, Nam Từ Liêm, TP. Hà Nội</p>
+          <a class="button" href="https://maps.google.com" target="_blank" rel="noopener">Bản đồ chỉ đường</a>
+        </div>
+        <div class="showroom" data-aos="fade-left">
+          <h2>VĂN PHÒNG - SHOWROOM TP HỒ CHÍ MINH</h2>
+          <p>📍 Số 456 Lê Duẩn, P. Bến Nghé, Quận 1, TP.HCM</p>
+          <a class="button" href="https://maps.google.com" target="_blank" rel="noopener">Bản đồ chỉ đường</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="lien-he">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">Adela<sup>VN</sup></div>
+          <p>📍 <strong>Địa chỉ:</strong> Số 123 Tây Mỗ, Nam Từ Liêm, TP. Hà Nội</p>
+          <p>📞 <strong>Hotline:</strong> 0321 456 987</p>
+          <p>🔧 <strong>Bảo hành:</strong> 0321 456 987</p>
+          <p>✉️ <strong>Email:</strong> info@adelavietnam.vn</p>
+        </div>
+        <div>
+          <h3>THÔNG TIN</h3>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Về Adela</a></li>
+            <li><a href="product.html">Sản phẩm</a></li>
+            <li><a href="index.html#tin-tuc">Tin tức</a></li>
+            <li><a href="#lien-he">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>HỖ TRỢ KHÁCH HÀNG</h3>
+          <ul>
+            <li>Hướng dẫn đặt hàng</li>
+            <li>Chính sách bảo mật</li>
+            <li>Chính sách đổi trả trong 30 ngày</li>
+            <li>Chính sách bảo hành 6 năm</li>
+            <li>Phương thức thanh toán & trả góp 0%</li>
+          </ul>
+        </div>
+        <div>
+          <h3>CẬP NHẬT TIN KHUYẾN MẠI</h3>
+          <p>Đăng ký nhận thông tin mới nhất và ưu đãi độc quyền</p>
+          <form class="newsletter demo-form" aria-label="Đăng ký nhận tin">
+            <input type="email" placeholder="Email của bạn..." required aria-label="Email" />
+            <button aria-label="Đăng ký"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          </form>
+          <h3>MẠNG XÃ HỘI</h3>
+          <div class="social">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Copyright by All rights reserved. Design by Vicogroup
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Cuộn lên đầu trang"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/effects.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+@use 'abstracts/variables';
+@use 'abstracts/mixins';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/layout';
+@use 'components/header';
+@use 'components/nav';
+@use 'components/footer';
+@use 'components/product-card';
+@use 'components/buttons';
+@use 'components/effects';
+@use 'components/animations';
+@use 'pages/home';
+@use 'components/slider';
+
+@include home.styles;
+@include typography.responsive;
+@include layout.responsive;
+@include header.responsive;
+@include footer.responsive;
+@include product-card.responsive;
+@include buttons.responsive;
+@include home.responsive;
+@include layout.form-accessibility;
+@include slider.styles;
+
+@include effects.styles;
+@include animations.styles;

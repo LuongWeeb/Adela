@@ -1,0 +1,775 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Kế hoạch 03C: Font Awesome 6 và Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Tủ bảo quản cigar GF 2180 - Adela Việt Nam</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <!-- Ngày 5: jQuery, AOS và Lightbox2 (theo thứ tự phụ thuộc) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js" defer></script>
+    <link rel="stylesheet" href="../assets/css/product.css" />
+      <!-- Google Fonts: Montserrat & Roboto (Chuẩn thiết kế Figma Adela) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Thanh thông tin -->
+    <div class="top-bar">
+      <div class="container top-inner">
+        <div class="social" aria-label="Mạng xã hội">
+          <span role="img" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span><span role="img" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span><span role="img" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span><span role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span>
+        </div>
+        <p>Tiết kiệm 20% <span class="promo-detail">khi sử dụng </span>mã: <strong>ADELAVIETNAM20</strong></p>
+        <p class="top-contact"><a class="hotline-link" href="tel:0321456987"><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>0321 456 987</strong></a> &nbsp; <i class="fa-solid fa-envelope" aria-hidden="true"></i> info@adelavietnam.vn</p>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-row">
+          <a class="logo" href="index.html"
+            ><img
+              src="../assets/images/logo.png"
+              alt="Adela Việt Nam"
+              width="169"
+              height="58"
+          /></a>
+          <form class="search demo-form" aria-label="Tìm kiếm sản phẩm">
+            <label class="visually-hidden" for="site-search">Tìm kiếm sản phẩm</label>
+            <input
+              name="site-search" 
+              id="site-search"              
+              type="search"
+              aria-label="Tìm kiếm sản phẩm"
+              placeholder="Tìm kiếm sản phẩm"
+            /><button aria-label="Tìm kiếm"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+          </form>
+          <span class="header-action"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Giỏ hàng <span class="cart-count" aria-label="0 sản phẩm">0</span></span
+          ><span class="header-action"><i class="fa-regular fa-user" aria-hidden="true"></i> Tài khoản</span>
+        </div>
+        <nav class="nav" aria-label="Menu chính">
+          <button type="button" class="hamburger-btn" id="hamburger-btn" aria-label="Mở menu" aria-expanded="false" aria-controls="nav-menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-close-wrapper">
+              <span class="nav-logo">Adela<sup>VN</sup></span>
+              <button type="button" class="nav-close-btn" id="nav-close-btn" aria-label="Đóng menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+            </li>
+            <li><a href="index.html">TRANG CHỦ</a></li>
+            <li><a href="about.html">VỀ ADELA</a></li>
+            <li class="has-dropdown">
+              <a href="product.html">SẢN PHẨM <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="product.html#tu-bao-quan"><i class="fa-solid fa-wine-bottle" aria-hidden="true"></i> Tủ bảo quản rượu vang</a></li>
+                <li><a href="product.html#tu-cigar"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Tủ bảo quản Cigar cao cấp</a></li>
+                <li><a href="product.html#ly-ruou-vang"><i class="fa-solid fa-wine-glass" aria-hidden="true"></i> Ly rượu vang pha lê Riedel</a></li>
+                <li><a href="product.html#decanter"><i class="fa-solid fa-flask" aria-hidden="true"></i> Bình chiết Decanter nghệ thuật</a></li>
+                <li><a href="product.html#phu-kien"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Phụ kiện & Dụng cụ mở vang</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#tin-tuc">TIN TỨC</a></li>
+            <li><a href="#lien-he">LIÊN HỆ</a></li>
+          </ul>
+          <div class="nav-notes-group">
+            <div class="nav-note-dropdown">
+              <a class="nav-note" href="about.html#showrooms" role="button" aria-expanded="false"
+                ><i class="fa-solid fa-store" aria-hidden="true"></i> Bạn muốn tự đến lấy hàng?<br /><strong
+                  >Chọn cửa hàng <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i
+                ></strong></a
+              >
+              <div class="dropdown-panel showroom-panel">
+                <div class="panel-header"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Hệ thống Showroom Adela</div>
+                <ul class="panel-list">
+                  <li>
+                    <strong>Showroom Hà Nội:</strong>
+                    <p>Số 123 Tây Mỗ, Nam Từ Liêm, Hà Nội</p>
+                    <a href="tel:0987654321"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4321</a>
+                  </li>
+                  <li>
+                    <strong>Showroom TP. Hồ Chí Minh:</strong>
+                    <p>Số 456 Lê Duẩn, P. Bến Nghé, Quận 1, TP.HCM</p>
+                    <a href="tel:0987654322"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4322</a>
+                  </li>
+                  <li>
+                    <strong>Showroom Đà Nẵng:</strong>
+                    <p>Số 789 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng</p>
+                    <a href="tel:0987654323"><i class="fa-solid fa-phone" aria-hidden="true"></i> 098 765 4323</a>
+                  </li>
+                </ul>
+                <div class="panel-footer">
+                  <a href="about.html#showrooms">Xem bản đồ chỉ đường &raquo;</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="nav-note-dropdown">
+              <a class="nav-note" href="product.html#tu-van" role="button" aria-expanded="false"
+                ><i class="fa-solid fa-truck-fast" aria-hidden="true"></i> Bạn cần giao hàng tận nơi?<br /><strong
+                  >Xem báo giá <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i
+                ></strong></a
+              >
+              <div class="dropdown-panel shipping-panel">
+                <div class="panel-header"><i class="fa-solid fa-truck-ramp-box" aria-hidden="true"></i> Báo giá & Chính sách giao hàng</div>
+                <ul class="panel-list">
+                  <li>
+                    <span class="shipping-tag tag-free">Miễn phí 100%</span>
+                    <strong>Hỏa tốc 2 Giờ (Nội thành HN & TP.HCM)</strong>
+                    <p>Giao nguyên kiện tủ rượu, cigar bằng ô tô chuyên dụng.</p>
+                  </li>
+                  <li>
+                    <span class="shipping-tag tag-standard">Đồng giá 150K</span>
+                    <strong>Vận chuyển toàn quốc (24h - 48h)</strong>
+                    <p>Đóng thùng gỗ bảo hiểm rơi vỡ, đổi mới ngay lập tức.</p>
+                  </li>
+                  <li>
+                    <span class="shipping-tag tag-vip">VIP</span>
+                    <strong>Lắp đặt & Test độ ẩm tận nhà</strong>
+                    <p>Chuyên viên kỹ thuật bàn giao và nghiệm thu trực tiếp.</p>
+                  </li>
+                </ul>
+                <div class="panel-footer">
+                  <a href="product.html#tu-van">Nhận tư vấn báo giá chi tiết &raquo;</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container" id="main-content">
+      <!-- BREADCRUMB -->
+      <div class="breadcrumb" aria-label="Đường dẫn trang">
+        <a href="index.html">Trang chủ</a> <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        <a href="product.html">Tủ bảo quản cigar</a> <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        <span>Tủ bảo quản cigar 1800 điếu cắm điện GF 2180</span>
+      </div>
+
+      <!-- PRODUCT HERO -->
+      <div class="product-detail-top">
+        <!-- Gallery -->
+        <div class="product-gallery" data-aos="fade-right">
+          <div class="main-image">
+            <a href="../assets/images/main-product.png" data-lightbox="cigar-gallery" data-title="Tủ bảo quản cigar GF 2180" data-alt="Tủ bảo quản cigar GF 2180" aria-label="Phóng to ảnh tủ cigar GF 2180">
+            <img
+              id="main-img"
+              src="../assets/images/main-product.png"
+              alt="Tủ bảo quản cigar 1800 điếu"
+            />
+            </a>
+          </div>
+          <div class="thumbnail-list">
+            <a class="thumbnail-item active" href="../assets/images/thumb-1.png" data-lightbox="cigar-gallery" data-title="Tủ cigar trong phòng khách" data-alt="Tủ cigar trong phòng khách" aria-label="Phóng to: Tủ cigar trong phòng khách"><img src="../assets/images/thumb-1.png" alt="Tủ cigar trong phòng khách" /></a>
+            <a class="thumbnail-item" href="../assets/images/thumb-2.png" data-lightbox="cigar-gallery" data-title="Các tầng bảo quản cigar" data-alt="Các tầng bảo quản cigar" aria-label="Phóng to: Các tầng bảo quản cigar"><img src="../assets/images/thumb-2.png" alt="Các tầng bảo quản cigar" /></a>
+            <a class="thumbnail-item" href="../assets/images/thumb-3.png" data-lightbox="cigar-gallery" data-title="Các mẫu tủ cigar" data-alt="Các mẫu tủ cigar" aria-label="Phóng to: Các mẫu tủ cigar"><img src="../assets/images/thumb-3.png" alt="Các mẫu tủ cigar" /></a>
+            <a class="thumbnail-item" href="../assets/images/thumb-4.png" data-lightbox="cigar-gallery" data-title="Tủ cigar cạnh cửa sổ" data-alt="Tủ cigar cạnh cửa sổ" aria-label="Phóng to: Tủ cigar cạnh cửa sổ"><img src="../assets/images/thumb-4.png" alt="Tủ cigar cạnh cửa sổ" /></a>
+          </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="product-main-info" data-aos="fade-left">
+          <h1>Tủ bảo quản cigar 1800 điếu cắm điện GF 2180</h1>
+          <div class="product-rating">
+            <span class="stars" role="img" aria-label="5 sao"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></span>
+            <span class="rating-summary">Điểm 4,5/5 trên 2 đánh giá</span>
+          </div>
+          <div class="price-box">
+            <span class="old-price">48.000.000₫</span>
+            <span class="current-price" data-price="40000000">40.000.000₫</span>
+            <span class="discount-tag">-17%</span>
+          </div>
+          <p class="short-desc">
+            Tủ bảo quản cigar 1800 điếu cắm điện GF 2180 lorem ipsum is simply
+            dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever.
+          </p>
+          <ul class="specs-bullets">
+            <li><strong>Model:</strong> GF 2180</li>
+            <li><strong>Thương hiệu:</strong> Golden Fire</li>
+            <li><strong>Loại tủ:</strong> cigar 2 trong 1</li>
+            <li><strong>Bảo hành:</strong> 12 tháng</li>
+            <li><strong>Tình trạng:</strong> Còn hàng</li>
+          </ul>
+
+          <div class="color-select">
+            <p class="color-label" id="color-label">Màu sắc</p>
+            <div class="color-options" role="group" aria-labelledby="color-label">
+              <button type="button" class="color-thumb active" data-color="Đen" aria-label="Chọn màu đen" aria-pressed="true"><img src="../assets/images/thumb-1.png" alt="Đen" /></button>
+              <button type="button" class="color-thumb" data-color="Vàng gỗ" aria-label="Chọn màu vàng gỗ" aria-pressed="false"><img src="../assets/images/cabinet-3.png" alt="Vàng gỗ" /></button>
+            </div>
+          </div>
+
+          <div class="purchase-actions">
+            <div class="qty-box">
+              <button type="button" data-quantity="decrease" aria-label="Giảm số lượng"><i class="fa-solid fa-minus" aria-hidden="true"></i></button>
+              <label class="visually-hidden" for="product-qty">Số lượng</label>
+            <input
+                name="product-qty"                
+                type="number" 
+                min="1" 
+                step="1"
+                id="product-qty"
+                aria-label="Số lượng"
+                value="1"
+                readonly
+              />
+              <button type="button" data-quantity="increase" aria-label="Tăng số lượng"><i class="fa-solid fa-plus" aria-hidden="true"></i></button>
+            </div>
+            <button
+              type="button"
+              class="btn-buy"
+            >
+              <i class="fa-solid fa-cart-arrow-down" aria-hidden="true"></i> MUA NGAY
+            </button>
+          </div>
+
+          <p class="hotline-note">
+            Nếu quý khách ngại đặt hàng hãy gọi ngay tới số<br />
+            Hotline miễn phí <a class="hotline-link" href="tel:19001234"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> <strong>19001234</strong></a> để mua hàng nhanh nhất
+          </p>
+        </div>
+
+        <!-- Right Benefit Policies -->
+        <div class="benefit-sidebar">
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
+            <div class="benefit-text">Miễn phí vận chuyển</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></div>
+            <div class="benefit-text">Trả góp lãi suất 0%</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i></div>
+            <div class="benefit-text">Nâng cấp dễ dàng</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i></div>
+            <div class="benefit-text">Bảo trì trọn đời</div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon"><i class="fa-solid fa-award" aria-hidden="true"></i></div>
+            <div class="benefit-text">Bảo hành 6 năm</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SPECS & CONSULT FORM -->
+      <div class="spec-consult-section">
+        <div>
+          <h2 class="section-heading-sm">Thông số kỹ thuật</h2>
+          <table class="spec-table">
+            <caption class="visually-hidden">Thông số kỹ thuật tủ cigar GF 2180</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Thương hiệu</th>
+                <td>Golden Fire</td>
+              </tr>
+              <tr>
+                <th scope="row">Mã sản phẩm</th>
+                <td>GF 2180</td>
+              </tr>
+              <tr>
+                <th scope="row">Phân loại màu</th>
+                <td>Đen, vàng</td>
+              </tr>
+              <tr>
+                <th scope="row">Dung tích</th>
+                <td>2 TRONG 1</td>
+              </tr>
+              <tr>
+                <th scope="row">Kích thước tủ</th>
+                <td>Cao 1800mm x Rộng 595mm x Sâu 700mm</td>
+              </tr>
+              <tr>
+                <th scope="row">Ngăn bảo quản rượu vang</th>
+                <td>36 chai</td>
+              </tr>
+              <tr>
+                <th scope="row">Ngăn bảo quản cigar</th>
+                <td>600-700 điếu</td>
+              </tr>
+              <tr>
+                <th scope="row">Cân bằng ẩm tự động</th>
+                <td>Có</td>
+              </tr>
+              <tr>
+                <th scope="row">Chất liệu</th>
+                <td>Thép tấm</td>
+              </tr>
+            </tbody>
+          </table>
+          <a href="#thong-tin" class="btn-view-more">Xem thêm</a>
+        </div>
+
+        <div class="consult-card" id="tu-van" data-aos="fade-up" data-aos-delay="100">
+          <h3>ĐĂNG KÝ TƯ VẤN</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry
+          </p>
+          <form class="demo-form" id="consult-form" aria-label="Đăng ký tư vấn">
+            <label class="field-label" for="consult-name">Họ và tên *</label>
+            <input
+              name="consult-name" 
+              id="consult-name"              
+              type="text"
+              placeholder="Họ và tên*"
+              required
+              aria-label="Họ và tên*"
+            />
+            <label class="field-label" for="consult-address">Địa chỉ</label>
+            <input name="consult-address" id="consult-address" type="text" placeholder="Địa chỉ" aria-label="Địa chỉ" />
+            <label class="field-label" for="consult-phone">Số điện thoại *</label>
+            <input
+              name="consult-phone" 
+              id="consult-phone"              
+              type="tel"
+              placeholder="Số điện thoại*"
+              required
+              aria-label="Số điện thoại*"
+            />
+            <label class="field-label" for="consult-message">Lời nhắn</label>
+            <textarea
+              name="consult-message" 
+              id="consult-message"              
+              placeholder="Để lại lời nhắn"
+              aria-label="Để lại lời nhắn"
+            ></textarea>
+            <button type="submit" class="btn-submit-consult">ĐĂNG KÝ</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- PRODUCT DESCRIPTION CONTENT -->
+      <section class="product-content-section" id="thong-tin">
+        <h2 class="section-heading-sm">THÔNG TIN SẢN PHẨM</h2>
+        <div class="product-tabs">
+          <div class="tab-list" role="tablist" aria-label="Thông tin tủ Adela">
+            <button type="button" class="tab-btn active" id="tab-technology" data-tab="pane-technology" role="tab" aria-controls="pane-technology" aria-selected="true" tabindex="0">Đặc điểm công nghệ</button>
+            <button type="button" class="tab-btn" id="tab-specifications" data-tab="pane-specifications" role="tab" aria-controls="pane-specifications" aria-selected="false" tabindex="-1">Thông số kỹ thuật</button>
+            <button type="button" class="tab-btn" id="tab-warranty" data-tab="pane-warranty" role="tab" aria-controls="pane-warranty" aria-selected="false" tabindex="-1">Chính sách bảo hành 6 năm</button>
+          </div>
+          <div class="tab-pane" id="pane-technology" role="tabpanel" aria-labelledby="tab-technology" tabindex="0">
+        <div class="content-block">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since 1966, when designers at Letraset and James Mosley, the
+            librarian at St Bride Printing Library in London, took a 1914 Cicero
+            translation and scrambled it to make dummy text for Letraset's Body
+            Type sheets. It has survived not only many decades, but also the
+            leap into electronic typesetting, remaining.
+          </p>
+        </div>
+
+        <div class="content-image-box">
+          <img src="../assets/images/kitchen.png" alt="Minh họa tủ bếp rượu vang" />
+        </div>
+
+        <div class="collapse-content" id="extra-product-desc" style="display: none;">
+          <div class="content-block">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since 1966, when designers at Letraset and James Mosley, the
+              librarian at St Bride Printing Library in London, took a 1914 Cicero
+              translation and scrambled it to make dummy text for Letraset's Body
+              Type sheets. It has survived not only many decades, but also the
+              leap into electronic typesetting, remaining essentially unchanged.
+              It was popularised thanks to these sheets and more recently with
+              desktop publishing software like Aldus PageMaker and Microsoft Word
+              including versions of Lorem Ipsum.
+            </p>
+          </div>
+
+          <div class="content-image-box">
+            <img src="../assets/images/vinoglow.png" alt="Vinoglow hệ thống tủ bảo quản" />
+          </div>
+        </div>
+
+        <div class="read-more-center">
+          <button type="button" class="btn-collapse" id="btn-toggle-desc" aria-expanded="false" aria-controls="extra-product-desc">
+            <span>Đọc thêm</span> <i class="fa-solid fa-chevron-down dropdown-arrow" aria-hidden="true"></i>
+          </button>
+        </div>
+          </div>
+          <div class="tab-pane" id="pane-specifications" role="tabpanel" aria-labelledby="tab-specifications" tabindex="0" hidden>
+            <h3>Thông số kỹ thuật GF 2180</h3>
+            <table class="spec-table">
+            <caption class="visually-hidden">Thông số kỹ thuật tủ cigar GF 2180</caption>
+            <tbody>
+              <tr>
+                <th scope="row">Thương hiệu</th>
+                <td>Golden Fire</td>
+              </tr>
+              <tr>
+                <th scope="row">Mã sản phẩm</th>
+                <td>GF 2180</td>
+              </tr>
+              <tr>
+                <th scope="row">Phân loại màu</th>
+                <td>Đen, vàng</td>
+              </tr>
+              <tr>
+                <th scope="row">Dung tích</th>
+                <td>2 TRONG 1</td>
+              </tr>
+              <tr>
+                <th scope="row">Kích thước tủ</th>
+                <td>Cao 1800mm x Rộng 595mm x Sâu 700mm</td>
+              </tr>
+              <tr>
+                <th scope="row">Ngăn bảo quản rượu vang</th>
+                <td>36 chai</td>
+              </tr>
+              <tr>
+                <th scope="row">Ngăn bảo quản cigar</th>
+                <td>600-700 điếu</td>
+              </tr>
+              <tr>
+                <th scope="row">Cân bằng ẩm tự động</th>
+                <td>Có</td>
+              </tr>
+              <tr>
+                <th scope="row">Chất liệu</th>
+                <td>Thép tấm</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="tab-pane" id="pane-warranty" role="tabpanel" aria-labelledby="tab-warranty" tabindex="0" hidden>
+            <h3>Chính sách bảo hành 6 năm</h3>
+            <p>Thời hạn bảo hành áp dụng theo từng dòng tủ và điều kiện ghi trên phiếu bảo hành. Quý khách vui lòng xác nhận với Adela về chương trình bảo hành 6 năm đối với model lựa chọn trước khi đặt mua.</p>
+            <p>Khi cần hỗ trợ, hãy chuẩn bị mã sản phẩm, số sê-ri và chứng từ mua hàng, sau đó <a href="#tu-van">gửi yêu cầu tư vấn</a> để được hướng dẫn kiểm tra và tiếp nhận bảo hành.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ: mỗi lần mở một câu trả lời -->
+      <section class="faq-section" aria-labelledby="faq-title">
+        <h2 class="section-heading-sm" id="faq-title" data-aos="fade-down">Câu hỏi thường gặp về Tủ Adela</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" id="faq-question-1" aria-expanded="false" aria-controls="faq-answer-1">Tủ cigar và tủ rượu vang có dùng chung được không?<i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button>
+            <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1"><p>Cigar và rượu vang có yêu cầu bảo quản khác nhau. Với tủ kết hợp, hãy sử dụng đúng ngăn chuyên dụng và cài đặt theo hướng dẫn của từng model; liên hệ Adela để được tư vấn dòng tủ phù hợp.</p></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">Nên đặt tủ Adela ở vị trí nào?<i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button>
+            <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2"><p>Đặt tủ trên bề mặt phẳng, khô ráo, tránh ánh nắng trực tiếp và nguồn nhiệt. Giữ khoảng thoáng quanh các khe thông gió theo hướng dẫn lắp đặt đi kèm tủ.</p></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">Vệ sinh và chăm sóc tủ như thế nào?<i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button>
+            <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3"><p>Ngắt nguồn trước khi vệ sinh. Dùng khăn mềm và làm theo hướng dẫn của nhà sản xuất; tránh hóa chất có mùi mạnh trong ngăn bảo quản. Kiểm tra định kỳ gioăng cửa, khe thông gió và bộ phận tạo ẩm nếu có.</p></div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">Làm thế nào để yêu cầu bảo hành?<i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i></button>
+            <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4"><p>Chuẩn bị mã tủ, số sê-ri, chứng từ mua hàng và mô tả tình trạng cần hỗ trợ. Liên hệ Adela qua thông tin trên phiếu bảo hành để xác nhận thời hạn, phạm vi áp dụng và cách tiếp nhận.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section class="reviews-section">
+        <div class="review-header">
+          <h2>BÌNH LUẬN</h2>
+          <a href="#danh-sach-binh-luan" class="btn-view-all">Xem tất cả</a>
+        </div>
+
+        <div class="review-form-box">
+          <div class="user-rating-choice">
+            <span>Điểm của bạn:</span>
+            <div class="stars-input" role="radiogroup" aria-label="Điểm đánh giá">
+              <label class="star-option active" for="rating-1"><input id="rating-1" class="visually-hidden" type="radio" name="rating" value="1" form="review-form" aria-label="1 sao" /><span aria-hidden="true"><i class="fa-solid fa-star" aria-hidden="true"></i></span></label>
+              <label class="star-option active" for="rating-2"><input id="rating-2" class="visually-hidden" type="radio" name="rating" value="2" form="review-form" aria-label="2 sao" /><span aria-hidden="true"><i class="fa-solid fa-star" aria-hidden="true"></i></span></label>
+              <label class="star-option active" for="rating-3"><input id="rating-3" class="visually-hidden" type="radio" name="rating" value="3" form="review-form" aria-label="3 sao" /><span aria-hidden="true"><i class="fa-solid fa-star" aria-hidden="true"></i></span></label>
+              <label class="star-option active" for="rating-4"><input id="rating-4" class="visually-hidden" type="radio" name="rating" value="4" form="review-form" aria-label="4 sao" /><span aria-hidden="true"><i class="fa-solid fa-star" aria-hidden="true"></i></span></label>
+              <label class="star-option active" for="rating-5"><input id="rating-5" class="visually-hidden" type="radio" name="rating" value="5" form="review-form" aria-label="5 sao" checked /><span aria-hidden="true"><i class="fa-solid fa-star" aria-hidden="true"></i></span></label>
+            </div>
+            <span class="rating-summary review-meta"
+              >Điểm 4,5/5 trên 2 đánh giá</span
+            >
+          </div>
+          <form class="demo-form" id="review-form" aria-label="Gửi đánh giá sản phẩm">
+            <label class="field-label" for="review-content">Nội dung bình luận *</label>
+            <textarea required
+              name="review-content" 
+              id="review-content"              
+              placeholder="Nội dung của bạn*"
+              aria-label="Nội dung của bạn*"
+            ></textarea>
+            <div class="review-inputs-grid">
+              <div class="field-group">
+            <label class="field-label" for="review-name">Họ và tên *</label>
+            <input
+                name="review-name" 
+                id="review-name"              
+                type="text"
+                placeholder="Họ và tên*"
+                required
+                aria-label="Họ và tên*"
+              />
+            </div>
+              <div class="field-group">
+            <label class="field-label" for="review-email">Email</label>
+            <input name="review-email" id="review-email" type="email" placeholder="Email" aria-label="Email" />
+            </div>
+            </div>
+            <div class="review-actions">
+              <span class="review-meta"
+                >(*) là thông tin bắt buộc</span
+              >
+              <button type="submit" class="btn-post-comment">
+                Đăng bình luận
+              </button>
+
+            </div>
+          </form>
+        </div>
+
+        <p class="form-status" id="review-status" role="status"></p>
+        <!-- Comments List -->
+        <div class="comment-list" id="danh-sach-binh-luan">
+          <div class="comment-item" data-rating="5">
+            <div class="comment-avatar">VA</div>
+            <div class="comment-body">
+              <div class="comment-title-bar">
+                <div>
+                  <span class="comment-author">Nguyễn Văn Anh</span> -
+                  <span class="comment-location"
+                    >Tây Hồ, TP Hà Nội</span
+                  >
+                </div>
+                <div class="comment-date">01/07/2026</div>
+              </div>
+              <div class="comment-stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> (Rất tốt - 5/5 stars)</div>
+              <p class="comment-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy.
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy.
+              </p>
+              <div class="comment-photos">
+                <div class="comment-photo-thumb">
+                  <img src="../assets/images/thumb-1.png" alt="Ảnh đánh giá: tủ cigar trong phòng khách" />
+                </div>
+                <div class="comment-photo-thumb">
+                  <img src="../assets/images/thumb-2.png" alt="Ảnh đánh giá: các tầng bảo quản cigar" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comment-item" data-rating="4">
+            <div
+              class="comment-avatar comment-avatar-warm"
+            >
+              AV
+            </div>
+            <div class="comment-body">
+              <div class="comment-title-bar">
+                <div>
+                  <span class="comment-author">Nguyễn Ánh Vân</span> -
+                  <span class="comment-location"
+                    >TP Hồ Chí Minh</span
+                  >
+                </div>
+                <div class="comment-date">01/07/2026</div>
+              </div>
+              <div class="comment-stars"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i> (Tốt - 4/5 stars)</div>
+              <p class="comment-text">
+                Lorem ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy;
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="comment-photos">
+                <div class="comment-photo-thumb">
+                  <img src="../assets/images/thumb-3.png" alt="Ảnh đánh giá: các mẫu tủ cigar" />
+                </div>
+                <div class="comment-photo-thumb">
+                  <img src="../assets/images/thumb-4.png" alt="Ảnh đánh giá: tủ cigar cạnh cửa sổ" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED PRODUCTS -->
+      <section class="related-section" data-aos="fade-up">
+        <div class="header-row">
+          <h2>SẢN PHẨM LIÊN QUAN</h2>
+          <a
+            href="index.html#tu-bao-quan"
+            class="related-view-all"
+            >Xem tất cả <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a
+          >
+        </div>
+        <div class="swiper related-swiper" aria-label="Sản phẩm liên quan">
+        <div class="swiper-wrapper related-grid">
+          <div class="product-card swiper-slide">
+            <div class="img-wrap" data-aos="fade-up">
+              <span class="badge flash-badge">-20%</span>
+              <img src="../assets/images/cabinet-1.png" alt="Tủ vang" />
+            </div>
+            <div class="info">
+              <div class="title">
+                Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng
+              </div>
+              <div class="price">
+                6.250.000₫ <span class="old">8.250.000₫</span>
+              </div>
+            </div>
+            <a class="card-quick-view" href="product.html" aria-label="Xem nhanh tủ rượu vang"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</a>
+          </div>
+          <div class="product-card swiper-slide">
+            <div class="img-wrap" data-aos="fade-up">
+              <span class="badge flash-badge">-20%</span>
+              <img src="../assets/images/cabinet-2.png" alt="Tủ vang" />
+            </div>
+            <div class="info">
+              <div class="title">
+                Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng
+              </div>
+              <div class="price">
+                6.250.000₫ <span class="old">8.250.000₫</span>
+              </div>
+            </div>
+            <a class="card-quick-view" href="product.html" aria-label="Xem nhanh tủ rượu vang"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</a>
+          </div>
+          <div class="product-card swiper-slide">
+            <div class="img-wrap" data-aos="fade-up">
+              <span class="badge flash-badge">-20%</span>
+              <img src="../assets/images/cabinet-3.png" alt="Tủ vang" />
+            </div>
+            <div class="info">
+              <div class="title">
+                Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng
+              </div>
+              <div class="price">
+                6.250.000₫ <span class="old">8.250.000₫</span>
+              </div>
+            </div>
+            <a class="card-quick-view" href="product.html" aria-label="Xem nhanh tủ rượu vang"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</a>
+          </div>
+          <div class="product-card swiper-slide">
+            <div class="img-wrap" data-aos="fade-up">
+              <span class="badge flash-badge">-20%</span>
+              <img src="../assets/images/cabinet-4.png" alt="Tủ vang" />
+            </div>
+            <div class="info">
+              <div class="title">
+                Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng
+              </div>
+              <div class="price">
+                6.250.000₫ <span class="old">8.250.000₫</span>
+              </div>
+            </div>
+            <a class="card-quick-view" href="product.html" aria-label="Xem nhanh tủ rượu vang"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</a>
+          </div>
+          <div class="product-card swiper-slide">
+            <div class="img-wrap" data-aos="fade-up">
+              <span class="badge flash-badge">-20%</span>
+              <img src="../assets/images/cabinet-5.png" alt="Tủ vang" />
+            </div>
+            <div class="info">
+              <div class="title">
+                Tủ rượu vang nhỏ gọn Vinocave 28 chai sang trọng
+              </div>
+              <div class="price">
+                6.250.000₫ <span class="old">8.250.000₫</span>
+              </div>
+            </div>
+            <a class="card-quick-view" href="product.html" aria-label="Xem nhanh tủ rượu vang"><i class="fa-solid fa-eye" aria-hidden="true"></i> Xem nhanh</a>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button type="button" class="swiper-button-prev" aria-label="Sản phẩm trước"></button>
+          <div class="swiper-pagination"></div>
+          <button type="button" class="swiper-button-next" aria-label="Sản phẩm tiếp theo"></button>
+        </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Chân trang dùng chung -->
+    <footer class="footer" id="lien-he">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            Adela<sup><i class="fa-solid fa-leaf" aria-hidden="true"></i></sup>
+          </div>
+          <p>
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i> <strong>Địa chỉ:</strong> Lorem ipsum dolor sit amet, consectetur
+          </p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>Hotline:</strong> 0321 456 987</p>
+          <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <strong>Bảo hành:</strong> 0321 456 987</p>
+          <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <strong>Email:</strong> info@adelavietnam.vn</p>
+          <p>
+            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i> <strong>Thời gian làm việc:</strong> Thứ 2 - Thứ 7 (08:00 - 18:00)
+          </p>
+        </div>
+        <div>
+          <h3>THÔNG TIN</h3>
+          <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="about.html">Về Adela</a></li>
+            <li><a href="product.html">Sản phẩm</a></li>
+            <li><a href="index.html#tin-tuc">Tin tức</a></li>
+            <li><a href="#lien-he">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>HỖ TRỢ</h3>
+          <ul>
+            <li>Hướng dẫn mua hàng</li>
+            <li>Chính sách bảo mật</li>
+            <li>Chính sách đổi trả</li>
+            <li>Chính sách bảo hành</li>
+            <li>Chính sách thanh toán</li>
+            <li>Phương thức giao nhận</li>
+          </ul>
+        </div>
+        <div>
+          <h3>CẬP NHẬT TIN KHUYẾN MẠI</h3>
+          <p>Đăng ký nhận thông tin mới nhất hoặc các ưu đãi hấp dẫn</p>
+          <form class="newsletter demo-form" aria-label="Đăng ký nhận tin">
+            <label class="visually-hidden" for="newsletter-email">Email nhận tin</label>
+            <input
+              name="newsletter-email" 
+              id="newsletter-email"              
+              type="email"
+              required
+              aria-label="Email nhận tin"
+              placeholder="Email của bạn"
+            /><button aria-label="Đăng ký nhận tin"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i></button>
+          </form>
+          <h3>MẠNG XÃ HỘI</h3>
+          <div class="social">
+            <span role="img" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></span><span role="img" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span><span role="img" aria-label="TikTok"><i class="fa-brands fa-tiktok" aria-hidden="true"></i></span><span role="img" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        © 2026 Copyright by All rights reserved. Design by Vicogroup
+      </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/product-detail.js" defer></script>
+    <script src="../assets/js/form-validation.js" defer></script>
+    <script src="../assets/js/slider.js" defer></script>
+    <button type="button" id="back-to-top" class="back-to-top" title="Cuộn lên đầu trang" aria-label="Cuộn lên đầu trang"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></button>
+    <script src="../assets/js/effects.js" defer></script>
+  </body>
+</html>

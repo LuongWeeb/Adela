@@ -1,0 +1,145 @@
+@use '../abstracts/variables' as *;
+
+// 03C brand accent, independent of the existing light-gold surfaces.
+$motion-gold: #c9a84c;
+$motion-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+@keyframes shimmer {
+  from { transform: translateX(0) skewX(-25deg); }
+  to { transform: translateX(450%) skewX(-25deg); }
+}
+
+@keyframes gold-pulse {
+  0% { box-shadow: 0 0 0 0 rgba($motion-gold, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba($motion-gold, 0); }
+  100% { box-shadow: 0 0 0 0 rgba($motion-gold, 0); }
+}
+
+@keyframes bounce-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes hover-elevation {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// Emit after page, AOS fallback and Swiper styles in all three entry points.
+@mixin styles {
+  .text-gold, .stars, .product-rating .stars, .comment-stars,
+  .star-option.active, .offer .fa-crown { color: $motion-gold; }
+  .support-grid i, .benefit-icon i, .policy-icon i { color: $color-navy; }
+  .values i { color: $motion-gold; }
+  .nav-note > i { color: $color-navy; }
+  .search button, .newsletter button, .back-to-top { color: $motion-gold; }
+  .footer p > i { color: $motion-gold; }
+  .top-contact i, .footer-brand sup i { color: $motion-gold; }
+  .fa-chevron-down, .breadcrumb .fa-chevron-right { font-size: 0.7em; margin-inline: 0.3em; }
+  .search button { font-size: 17px; }
+  .social span { display: inline-flex; align-items: center; justify-content: center; }
+  .social span, .footer .social span {
+    color: $color-white;
+    border-color: $motion-gold;
+    background: transparent;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    &:hover { color: $motion-gold; background: rgba($motion-gold, 0.12); }
+  }
+  .cart-count {
+    display: inline-grid;
+    place-items: center;
+    min-width: 17px;
+    height: 17px;
+    padding-inline: 3px;
+    border-radius: 50%;
+    background: $color-red;
+    color: $color-white;
+    font-size: 10px;
+  }
+  .hotline-link { display: inline-block; border-radius: 16px; }
+  .top-contact .hotline-link { margin-right: 6px; }
+  .flash-badge { z-index: 1; background: $color-red; }
+  .flash-badge, .hotline-link, .sale-dates .current, .flash-bolt,
+  .zalo-button, .chat-button { animation: gold-pulse 2s infinite; }
+
+  .product-card {
+    overflow: hidden;
+    // Individual translate composes with AOS transforms instead of replacing them.
+    translate: 0 0;
+    transition: translate 0.35s $motion-ease, box-shadow 0.35s $motion-ease;
+    img { transition: transform 0.5s $motion-ease; }
+    > a { display: block; }
+    &:hover, &:focus-within {
+      translate: 0 -8px;
+      box-shadow: 0 16px 32px rgba($color-navy, 0.12);
+      img { transform: scale(1.06); }
+    }
+  }
+  // Remove the older detail-page hover translation; AOS cards keep their reveal.
+  .product-card:not([data-aos]):hover { transform: none; }
+  .product-card[data-aos][data-aos] {
+    transition-property: opacity, transform, translate, box-shadow;
+    transition-duration: 0.8s, 0.8s, 0.35s, 0.35s;
+    transition-timing-function: $motion-ease;
+  }
+  .card-quick-view {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 10px 10px;
+    padding: 8px;
+    border-radius: 4px;
+    background: $color-navy;
+    color: $motion-gold;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  // Reserve space and retain touch access; only pointer devices hide the reveal.
+  @media (hover: hover) and (pointer: fine) {
+    .card-quick-view { opacity: 0; transform: translateY(12px); }
+    .product-card:hover .card-quick-view,
+    .product-card:focus-within .card-quick-view { animation: hover-elevation 0.35s $motion-ease both; }
+  }
+  .related-swiper { padding: 10px 4px 24px; }
+
+  .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: '';
+      position: absolute;
+      pointer-events: none;
+      inset: 0 auto 0 -100%;
+      width: 60%;
+      background: linear-gradient(120deg, transparent, rgba($motion-gold, 0.4), rgba(255, 255, 255, 0.35), transparent);
+      transform: skewX(-25deg);
+    }
+    &:hover::before, &:focus-visible::before { animation: shimmer 0.75s ease both; }
+  }
+  .back-to-top:hover i, .back-to-top:focus-visible i { animation: bounce-up 0.8s ease-in-out infinite; }
+  .category-grid a {
+    transition: color 0.3s ease;
+    img { border: 2px solid transparent; transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; }
+    &:hover, &:focus-visible {
+      color: $motion-gold;
+      img {
+        transform: scale(1.08) rotate(2deg);
+        border-color: $motion-gold;
+        box-shadow: 0 8px 20px rgba($motion-gold, 0.3);
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .product-card, .product-card[data-aos][data-aos], .product-card img, .category-grid a, .category-grid img { transition: none; }
+    .product-card:hover, .product-card:focus-within { translate: none; }
+    .product-card:is(:hover, :focus-within) img,
+    .category-grid a:is(:hover, :focus-visible) img { transform: none; }
+    .flash-badge, .hotline-link, .sale-dates .current, .flash-bolt,
+    .zalo-button, .chat-button, .back-to-top:is(:hover, :focus-visible) i,
+    .product-card .card-quick-view { animation: none !important; }
+    .product-card .card-quick-view { opacity: 1; transform: none; }
+    :is(.btn-shimmer, .btn-buy, .button, .btn-submit-consult)::before { display: none; animation: none !important; }
+  }
+}

@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+
+@mixin styles {
+  .swiper {
+    min-width: 0;
+    max-width: 100%;
+    --swiper-theme-color: #{$color-navy};
+  }
+
+  .swiper-initialized > .swiper-wrapper {
+    display: flex;
+    gap: 0;
+  }
+
+  .swiper .swiper-slide {
+    height: auto;
+    min-width: 0;
+  }
+
+  .swiper:not(.swiper-initialized) .swiper-slide {
+    width: auto;
+  }
+
+  .slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .slider-controls .swiper-button-prev, .slider-controls .swiper-button-next {
+    position: static;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border: 1px solid $color-gray-border;
+    border-radius: 50%;
+    background: $color-white;
+    flex-shrink: 0;
+
+    &::after { font-size: 16px; }
+  }
+
+  .slider-controls .swiper-pagination {
+    position: static;
+    width: auto;
+  }
+
+  .swiper:not(.swiper-initialized) .slider-controls,
+  .slider-controls:has(.swiper-button-lock) {
+    display: none;
+  }
+}
