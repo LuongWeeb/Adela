@@ -1,6 +1,92 @@
 @use '../abstracts/variables' as *;
 
 @mixin styles {
+  // Kinetic typography: keep a readable gold fallback without text clipping.
+  .gold-shimmer-text {
+    display: inline-block;
+    color: #c9a84c;
+    text-shadow: none;
+  }
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    .gold-shimmer-text {
+      background-image: linear-gradient(120deg, #c9a84c 0%, #fff7d6 35%, #fff 50%, #fff7d6 65%, #c9a84c 100%);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textGoldShimmer 4s linear infinite;
+    }
+  }
+
+  .luxury-marquee {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #052352 0%, #031738 100%);
+    border-block: 1px solid rgba(201, 168, 76, 0.35);
+    padding-block: 12px;
+    margin-block: 40px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+
+    &:hover .marquee-track, &:focus-within .marquee-track {
+      animation-play-state: paused;
+    }
+    &:focus-visible { outline: 2px solid $color-gold; outline-offset: 3px; }
+  }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    min-width: 200%;
+    animation: marqueeScroll 28s linear infinite;
+    will-change: transform;
+  }
+  // Two identical, equally sized groups include the gap at the loop boundary.
+  .marquee-content {
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: space-around;
+    gap: 28px;
+    padding-right: 28px;
+    white-space: nowrap;
+    font-family: $font-heading;
+    font-size: 13.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $color-gold;
+
+    .separator { color: #e5b358; font-size: 11px; opacity: 0.8; }
+    .highlight { color: $color-white; }
+  }
+
+  // Reveal only the heading text inside its mask, using the existing AOS trigger.
+  .section-title h2, .center-title h2 { overflow: hidden; }
+  .section-title .button { flex-shrink: 0; }
+  .heading-reveal-text {
+    display: block;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  [data-aos='heading-reveal'][data-aos] { opacity: 1; transform: none; }
+  html.aos-ready [data-aos='heading-reveal']:not(.aos-animate) .heading-reveal-text {
+    transform: translate3d(0, 110%, 0);
+  }
+
+  @media (max-width: 768px) {
+    .luxury-marquee { margin-block: 30px; }
+    .marquee-content { font-size: 12px; letter-spacing: 1.5px; gap: 20px; padding-right: 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; transform: none; will-change: auto; width: 100%; min-width: 0; }
+    .marquee-content { flex-wrap: wrap; flex-basis: 100%; justify-content: center; gap: 12px; padding-inline: 16px; white-space: normal; text-align: center; }
+    .marquee-content[aria-hidden='true'] { display: none; }
+    .gold-shimmer-text { animation: none; background-image: none; -webkit-text-fill-color: #c9a84c; }
+    .heading-reveal-text { transform: none !important; transition: none; }
+  }
+  @media (forced-colors: active) {
+    .gold-shimmer-text { animation: none; background-image: none; -webkit-text-fill-color: currentColor; }
+  }
+
   // clip prevents horizontal reveal overflow without trapping position: sticky.
   html, body { overflow-x: clip; }
   html {
