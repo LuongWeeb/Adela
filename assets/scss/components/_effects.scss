@@ -13,12 +13,95 @@
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: box-shadow 0.25s ease;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.35s ease;
 
-    .header-row { transition: padding 0.25s ease; }
+    // Keep dimensions constant while scrolling; no animated padding/reflow.
     &.is-sticky {
-      box-shadow: 0 4px 18px rgba($color-navy, 0.18);
-      .header-row { padding-block: 6px; }
+      background-color: $color-navy;
+      border-bottom-color: rgba(201, 168, 76, 0.28);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      .header-row { border-bottom-color: rgba(201, 168, 76, 0.28); }
+      .header-action, .search button, .hamburger-btn,
+      .nav-note, .nav-note strong, .nav-note i { color: $color-gold; }
+      .search { background: rgba(255, 255, 255, 0.96); }
+      @media (min-width: 769px) {
+        .nav-menu > li > a { color: $color-gold; }
+      }
+    }
+  }
+
+  // Opaque surfaces remain readable when backdrop-filter is unavailable.
+  .has-dropdown .dropdown-menu, .dropdown-panel {
+    background: $color-white;
+    border-color: rgba(201, 168, 76, 0.28);
+    box-shadow: 0 16px 36px rgba($color-navy, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+    transition: opacity 0.28s ease, transform 0.28s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.28s ease;
+  }
+  .has-dropdown .dropdown-menu li a { color: $color-navy; }
+  .product-card .badge, .discount-tag {
+    background: $color-red-badge;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  }
+  .flash {
+    border: 1px solid rgba(201, 168, 76, 0.45);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7), 0 12px 32px rgba($color-navy, 0.12);
+  }
+
+  @supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .site-header.is-sticky {
+      background-color: rgba(5, 35, 82, 0.82);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .has-dropdown .dropdown-menu, .dropdown-panel {
+      background: rgba(255, 255, 255, 0.88);
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+    }
+    .product-card .badge, .discount-tag {
+      background: rgba($color-red-badge, 0.86);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+    }
+    .flash {
+      background: linear-gradient(rgba(213, 0, 0, 0.94), rgba(255, 186, 119, 0.86) 35%, rgba(255, 211, 163, 0.82));
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+    @media (max-width: 768px) {
+      // Filtering the header itself would trap the fixed mobile drawer/overlay.
+      .site-header.is-sticky {
+        isolation: isolate;
+        background: transparent;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          z-index: -1;
+          pointer-events: none;
+          background: rgba(5, 35, 82, 0.82);
+          -webkit-backdrop-filter: blur(14px);
+          backdrop-filter: blur(14px);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 769px) {
+    .has-dropdown:focus-within > .dropdown-menu,
+    .nav-note-dropdown:focus-within > .dropdown-panel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .has-dropdown .dropdown-menu li a {
+      transition: color 0.2s ease, background-color 0.2s ease;
+      &:hover { padding-left: 20px; }
     }
   }
 
@@ -77,5 +160,11 @@
   @media (prefers-reduced-motion: reduce) {
     [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
     .site-header, .site-header .header-row, .back-to-top { transition: none; }
+    .has-dropdown .dropdown-menu, .dropdown-panel,
+    .has-dropdown .dropdown-menu li a, .has-dropdown .dropdown-menu li a i,
+    .thumbnail-item, .qty-box button, .consult-card, .spec-card { transition: none; }
+    .thumbnail-item:is(:hover, .active), .qty-box button:active,
+    .consult-card:hover, .spec-card:hover, .back-to-top:hover,
+    .has-dropdown .dropdown-menu li a:hover i { transform: none; }
   }
 }

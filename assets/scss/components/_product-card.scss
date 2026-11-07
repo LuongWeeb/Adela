@@ -24,10 +24,6 @@
   overflow: hidden;
 }
 
-.product-card:hover {
-  box-shadow: 0 4px 14px #05235222;
-}
-
 .product-card img {
   width: 100%;
   height: 210px;
@@ -110,12 +106,6 @@
     border-radius: 6px;
     overflow: hidden;
     border: 1px solid var(--gray-border);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   }
 
   .product-card .badge {
@@ -192,4 +182,74 @@
     min-height: 34px;
     font-weight: bold;
   }
+}
+
+// Shared by home cards (image + info inside a link) and related-product cards.
+@mixin luxury {
+  .product-card {
+    --product-image-height: 210px;
+    // Individual translate preserves the transform used by AOS reveals.
+    translate: 0 0;
+    transition: translate 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    > a:not(.card-quick-view) { display: block; position: relative; overflow: hidden; }
+    .product-image, .img-wrap { position: relative; overflow: hidden; }
+    img { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+    // Opaque info keeps the home image zoom inside its fixed image area.
+    .info { position: relative; background: $color-white; }
+    .badge { z-index: 2; }
+
+    > a:not(.card-quick-view)::after, .product-image::after, .img-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), rgba(201, 168, 76, 0.18), transparent);
+      transform: translateX(-150%) skewX(-25deg);
+      opacity: 0;
+      pointer-events: none;
+    }
+    > a:not(.card-quick-view)::after { height: var(--product-image-height); }
+
+    &:focus-within { @include luxury-hover; }
+    @media (hover: hover) and (pointer: fine) {
+      &:hover { @include luxury-hover; }
+    }
+  }
+  .product-card[data-aos][data-aos] {
+    transition-property: opacity, transform, translate;
+    transition-duration: 0.8s, 0.8s, 0.4s;
+    transition-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  @include respond-to('layout-mobile') {
+    .product-card { --product-image-height: 170px; }
+  }
+  .sale-products .product-card { --product-image-height: 180px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .product-card {
+      &, &[data-aos][data-aos], img { transition: none; }
+      &:is(:hover, :focus-within) {
+        translate: none;
+        img { transform: none; }
+      }
+      > a:not(.card-quick-view)::after, .product-image::after, .img-wrap::after {
+        display: none;
+        animation: none !important;
+      }
+    }
+  }
+}
+
+@mixin luxury-hover {
+  translate: 0 -6px;
+  border-color: rgba(201, 168, 76, 0.45);
+  // Static shadow avoids repainting a blurred shadow on every animation frame.
+  box-shadow: 0 16px 36px rgba(201, 168, 76, 0.22);
+  img { transform: scale(1.06); }
+  > a:not(.card-quick-view)::after, .product-image::after, .img-wrap::after {
+    animation: shimmerSweep 0.85s ease-out;
+  }
+  h3, .title, .product-name a { color: $color-gold-light; }
 }

@@ -15,6 +15,67 @@
   color: $color-white;
 }
 
+// Included after page styles so the legacy left-based sweep cannot win.
+@mixin luxury {
+  .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), rgba(201, 168, 76, 0.2), transparent);
+      transform: translateX(-150%) skewX(-25deg);
+      opacity: 0;
+      pointer-events: none;
+      transition: none;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-gold-light;
+      outline-offset: 3px;
+    }
+
+    &:focus-visible:not(:disabled):not([aria-disabled='true']) {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(201, 168, 76, 0.28);
+      &::before { animation: shimmerSweep 0.85s ease-out; }
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover:not(:disabled):not([aria-disabled='true']) {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(201, 168, 76, 0.28);
+        &::before { animation: shimmerSweep 0.85s ease-out; }
+      }
+    }
+
+    // Also overrides the old product-page hover left: 150% rule.
+    &:is(:hover, :focus-visible)::before { left: 0; }
+    &:active:not(:disabled):not([aria-disabled='true']) { transform: translateY(0); }
+    &:disabled, &[aria-disabled='true'] {
+      transform: none;
+      box-shadow: none;
+      &::before { animation: none; }
+    }
+  }
+
+  @media (hover: none) {
+    :is(.btn-shimmer, .btn-buy, .button, .btn-submit-consult):hover:not(:focus-visible) { transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
+      transition: none;
+      &:is(:hover, :focus-visible, :active):not(:disabled):not([aria-disabled='true']) { transform: none; }
+      &::before { display: none; animation: none; }
+    }
+  }
+}
+
 @mixin responsive {
   @include respond-to('layout-mobile') {
     .section-title .button {

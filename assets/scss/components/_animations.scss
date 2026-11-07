@@ -1,18 +1,21 @@
 @use '../abstracts/variables' as *;
+@use 'buttons';
+@use 'product-card';
 
 // 03C brand accent, independent of the existing light-gold surfaces.
 $motion-gold: #c9a84c;
 $motion-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
 
-@keyframes shimmer {
-  from { transform: translateX(0) skewX(-25deg); }
-  to { transform: translateX(450%) skewX(-25deg); }
+@keyframes shimmerSweep {
+  0% { transform: translateX(-150%) skewX(-25deg); opacity: 0; }
+  50% { opacity: 0.6; }
+  100% { transform: translateX(250%) skewX(-25deg); opacity: 0; }
 }
 
-@keyframes gold-pulse {
-  0% { box-shadow: 0 0 0 0 rgba($motion-gold, 0.6); }
-  70% { box-shadow: 0 0 0 12px rgba($motion-gold, 0); }
-  100% { box-shadow: 0 0 0 0 rgba($motion-gold, 0); }
+// Animate a pre-painted ring, not box-shadow on every frame.
+@keyframes goldPulse {
+  0%, 100% { transform: scale(1); opacity: 0; }
+  50% { transform: scale(1.08); opacity: 0.4; }
 }
 
 @keyframes bounce-up {
@@ -58,30 +61,25 @@ $motion-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   .hotline-link { display: inline-block; border-radius: 16px; }
   .top-contact .hotline-link { margin-right: 6px; }
-  .flash-badge { z-index: 1; background: $color-red; }
+  .flash-badge { z-index: 1; }
   .flash-badge, .hotline-link, .sale-dates .current, .flash-bolt,
-  .zalo-button, .chat-button { animation: gold-pulse 2s infinite; }
-
-  .product-card {
-    overflow: hidden;
-    // Individual translate composes with AOS transforms instead of replacing them.
-    translate: 0 0;
-    transition: translate 0.35s $motion-ease, box-shadow 0.35s $motion-ease;
-    img { transition: transform 0.5s $motion-ease; }
-    > a { display: block; }
-    &:hover, &:focus-within {
-      translate: 0 -8px;
-      box-shadow: 0 16px 32px rgba($color-navy, 0.12);
-      img { transform: scale(1.06); }
+  .zalo-button, .chat-button, .discount-tag {
+    animation: none;
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      box-shadow: 0 0 0 5px rgba($motion-gold, 0.5);
+      pointer-events: none;
+      animation: goldPulse 2s ease-in-out infinite;
     }
   }
-  // Remove the older detail-page hover translation; AOS cards keep their reveal.
-  .product-card:not([data-aos]):hover { transform: none; }
-  .product-card[data-aos][data-aos] {
-    transition-property: opacity, transform, translate, box-shadow;
-    transition-duration: 0.8s, 0.8s, 0.35s, 0.35s;
-    transition-timing-function: $motion-ease;
-  }
+  .hotline-link, .sale-dates .current, .flash-bolt, .discount-tag { position: relative; }
+
+  // Emit after page variants and AOS rules to avoid competing hover effects.
+  @include product-card.luxury;
+  @include buttons.luxury;
   .card-quick-view {
     display: flex;
     align-items: center;
@@ -103,20 +101,6 @@ $motion-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
   }
   .related-swiper { padding: 10px 4px 24px; }
 
-  .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
-    position: relative;
-    overflow: hidden;
-    &::before {
-      content: '';
-      position: absolute;
-      pointer-events: none;
-      inset: 0 auto 0 -100%;
-      width: 60%;
-      background: linear-gradient(120deg, transparent, rgba($motion-gold, 0.4), rgba(255, 255, 255, 0.35), transparent);
-      transform: skewX(-25deg);
-    }
-    &:hover::before, &:focus-visible::before { animation: shimmer 0.75s ease both; }
-  }
   .back-to-top:hover i, .back-to-top:focus-visible i { animation: bounce-up 0.8s ease-in-out infinite; }
   .category-grid a {
     transition: color 0.3s ease;
@@ -137,8 +121,10 @@ $motion-ease: cubic-bezier(0.165, 0.84, 0.44, 1);
     .product-card:is(:hover, :focus-within) img,
     .category-grid a:is(:hover, :focus-visible) img { transform: none; }
     .flash-badge, .hotline-link, .sale-dates .current, .flash-bolt,
-    .zalo-button, .chat-button, .back-to-top:is(:hover, :focus-visible) i,
+    .zalo-button, .chat-button, .discount-tag, .back-to-top:is(:hover, :focus-visible) i,
     .product-card .card-quick-view { animation: none !important; }
+    :is(.flash-badge, .hotline-link, .sale-dates .current, .flash-bolt,
+      .zalo-button, .chat-button, .discount-tag)::after { display: none; animation: none; }
     .product-card .card-quick-view { opacity: 1; transform: none; }
     :is(.btn-shimmer, .btn-buy, .button, .btn-submit-consult)::before { display: none; animation: none !important; }
   }

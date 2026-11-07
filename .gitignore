@@ -1,6 +1,9 @@
 # Dependencies
 node_modules/
 
+# Editor / IDE configuration
+.vscode/
+
 # Non-website docs, plans, test scripts & designs (kept locally only)
 doc/
 plans/
