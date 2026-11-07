@@ -193,7 +193,11 @@
     transition: translate 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     > a:not(.card-quick-view) { display: block; position: relative; overflow: hidden; }
     .product-image, .img-wrap { position: relative; overflow: hidden; }
-    img { transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+    img {
+      // Keep the transform context stable when hover starts/ends.
+      transform: scale(1);
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
     // Opaque info keeps the home image zoom inside its fixed image area.
     .info { position: relative; background: $color-white; }
     .badge { z-index: 2; }

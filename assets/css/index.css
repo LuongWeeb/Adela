@@ -1755,6 +1755,7 @@ html:not(.aos-ready) [data-aos] {
   overflow: hidden;
 }
 .product-card img {
+  transform: scale(1);
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .product-card .info {
@@ -1843,6 +1844,7 @@ html:not(.aos-ready) [data-aos] {
 .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
   position: relative;
   overflow: hidden;
+  transform: translateY(0);
   transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .btn-shimmer::before, .btn-buy::before, .button::before, .btn-submit-consult::before {
@@ -1899,6 +1901,7 @@ html:not(.aos-ready) [data-aos] {
 @media (prefers-reduced-motion: reduce) {
   .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
     transition: none;
+    transform: none;
   }
   .btn-shimmer:is(:hover, :focus-visible, :active):not(:disabled):not([aria-disabled=true]), .btn-buy:is(:hover, :focus-visible, :active):not(:disabled):not([aria-disabled=true]), .button:is(:hover, :focus-visible, :active):not(:disabled):not([aria-disabled=true]), .btn-submit-consult:is(:hover, :focus-visible, :active):not(:disabled):not([aria-disabled=true]) {
     transform: none;

@@ -20,6 +20,7 @@
   .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
     position: relative;
     overflow: hidden;
+    transform: translateY(0);
     transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 
     &::before {
@@ -70,6 +71,7 @@
   @media (prefers-reduced-motion: reduce) {
     .btn-shimmer, .btn-buy, .button, .btn-submit-consult {
       transition: none;
+      transform: none;
       &:is(:hover, :focus-visible, :active):not(:disabled):not([aria-disabled='true']) { transform: none; }
       &::before { display: none; animation: none; }
     }
